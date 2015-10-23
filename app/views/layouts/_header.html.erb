@@ -1,0 +1,29 @@
+<!-- NAVBAR
+================================================== -->
+
+<div class="navbar-wrapper">
+  <div class="container" id="top">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to image_tag("logo_blanco_sin_slogan.png", size: "180x62", alt: "Logo Macromet"), '#top', class: "page-scroll", id: "logo" %>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><%= link_to "Portafolio", '#portfolio', class: "page-scroll" %></li>
+            <li><%= link_to "Proceso", '#process', class: "page-scroll" %></li>
+            <li><%= link_to "Equipo", '#team', class: "page-scroll" %></li>
+            <li><%= link_to "Contacto", '#' %></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>

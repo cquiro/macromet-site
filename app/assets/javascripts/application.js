@@ -13,4 +13,32 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap-sprockets
 //= require_tree .
+
+$( document ).ready(function() {
+  $('.team-member').hover(
+      function(){
+          $(this).find('.team-description').slideDown(250); //.fadeIn(250)
+      },
+      function(){
+          $(this).find('.team-description').slideUp(250); //.fadeOut(205)
+      }
+  );
+
+  $(function() {
+  $('a[href*=#]:not([href=#myCarousel])').click(function () {
+  // $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+});
