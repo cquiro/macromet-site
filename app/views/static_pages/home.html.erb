@@ -9,13 +9,14 @@
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <!-- <%= link_to image_tag("background_img.jpg", alt: "First Slide"), '#', class: "first-slide" %> -->
       <img class="first-slide" src="http://lorempixel.com/1200/600/people" alt="First slide">
       <div class="container">
         <div class="carousel-caption">
           <h1>IMPULSO E INNOVACIÓN PARA SU MARCA.</h1>
-          <p>Exhibición. Ambientación. Soluciones.</p>
-          <p><a class="btn btn-lg btn-primary" href="#" role="button">Contáctenos</a></p>
+          <p>Ocho años conectando productos de calidad con el consumidor final.</p>
+          <p>
+            <%= link_to "Exhibición", "#portfolio", class: "btn btn-lg btn-primary page'scroll", role: "button" %>
+          </p>
         </div>
       </div>
     </div>
@@ -23,9 +24,11 @@
       <img class="second-slide" src="http://lorempixel.com/1200/600/city" alt="Second slide">
       <div class="container">
         <div class="carousel-caption">
-          <h1>TRADICIÓN DE CALIDAD.</h1>
-          <p> Más de 27 años construyendo país.</P>
-          <p><a class="btn btn-lg btn-primary" href="#" role="button">Nuestra historia</a></p>
+          <h1>EXPANDIMOS NUESTROS HORIZONTES.</h1>
+          <p>Diseño, producción y montaje de escenografía para Comedy Central Stand-Up Colombia.</P>
+          <p>
+            <%= link_to "Más sobre este proyecto", "#", class: "btn btn-lg btn-primary", role: "button" %>
+          </p>
         </div>
       </div>
     </div>
@@ -33,9 +36,11 @@
       <img class="third-slide" src="http://lorempixel.com/1200/600/sports" alt="Third slide">
       <div class="container">
         <div class="carousel-caption">
-          <h1>FRASE SOBRE AMBIENTACIÓN (COMEDY CENTRAL).</h1>
-          <p>Subtítulo sobre proyecto de Comedy Central.</p>
-          <p><a class="btn btn-lg btn-primary" href="#" role="button">Ver más</a></p>
+          <h1>TRADICIÓN DE CALIDAD.</h1>
+          <p>Más de 27 años construyendo país.</p>
+          <p>
+            <%= link_to "Nuestra historia", "#", class: "btn btn-lg btn-primary", role: "button" %>
+          </p>
         </div>
       </div>
     </div>
@@ -49,6 +54,26 @@
     <span class="sr-only">Next</span>
   </a>
 </div><!-- /.carousel -->
+
+
+<!-- Process (¿por qué Macromet?)
+================================================== -->
+
+<div class="container quienes" id="quienes">
+  <div class="container marketing">
+
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>
+          "Desarrollamos estrategias innovadoras orientadas a incrementar el consumo
+          y la recordación de marca a través de soluciones de diseño para exhibición en el punto de venta."
+        </h2>
+      </div>
+    </div><!-- /.row -->
+
+  </div>
+</div><!-- container process -->
+
 
 
 <!-- Portfolio (lineas de negocio)
@@ -73,10 +98,13 @@
     <div class="col-md-7">
       <h2 class="featurette-heading">Exhibición. <span class="text-muted">Hacemos que su producto sobresalga.</span></h2>
       <p class="lead">
-        Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.
-        Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+        Diseñamos, fabricamos e implementamos todo tipo de muebles y exhibidores para punto de venta.
+        También desarrollamos proyectos de visibilidad con elementos innovadores y llamativos para
+        resaltar su marca.
       </p>
-      <p><a class="btn btn-lg btn-info" href="#" role="button">MÁS SOBRE EXHIBICIÓN</a></p>
+      <p>
+        <%= link_to "CASOS DE ÉXITO", "#", class: "btn btn-lg btn-info", role: "button" %>
+      </p>
     </div>
     <div class="col-md-5">
       <%= link_to image_tag("periodico_counter.png", size: "357x478", alt: "Producto"), '#', class: "featurette-image img-responsive center-block pull-right" %>
@@ -91,10 +119,11 @@
     <div class="col-md-7 col-md-push-5">
       <h2 class="featurette-heading">Ambientación. <span class="text-muted">Creamos espacios memorables.</span></h2>
       <p class="lead">
-        Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.
-        Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+        Desarrollamos proyectos exitosos de ambientación incluyendo stands, locales comerciales y escenografías.
       </p>
-      <p><a class="btn btn-lg btn-info" href="#" role="button">MÁS SOBRE AMBIENTACIÓN</a></p>
+      <p>
+        <%= link_to "CASOS DE ÉXITO", "#", class: "btn btn-lg btn-info", role: "button" %>
+      </p>
     </div>
     <div class="col-md-5 col-md-pull-7">
       <%= link_to image_tag("coolwomaneltiempo.png", size: "350x478", alt: "Producto"), '#', class: "featurette-image img-responsive center-block" %>
@@ -107,12 +136,14 @@
 
   <div class="row featurette">
     <div class="col-md-7">
-      <h2 class="featurette-heading">Soluciones. <span class="text-muted">Soluciones a la medida de nuestro país.</span></h2>
+      <h2 class="featurette-heading">Soluciones. <span class="text-muted">Productos a la medida de nuestro país.</span></h2>
       <p class="lead">
-        Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.
-        Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+        A lo largo de los años hemos desarrollado proyectos estructurales para todo tipo de industrias.
+        Historicamente hemos asumido nuevos retos para solucionar los problemas de nuestros clientes más exigentes.
       </p>
-      <p><a class="btn btn-lg btn-info" href="#" role="button">MÁS SOBRE SOLUCIONES</a></p>
+      <p>
+        <%= link_to "CASOS DE ÉXITO", "#", class: "btn btn-lg btn-info", role: "button" %>
+      </p>
     </div>
     <div class="col-md-5">
       <%= link_to image_tag("fs_peq_castrol.png", size: "227x478", alt: "Producto"), '#', class: "featurette-image img-responsive center-block pull-right" %>
@@ -136,30 +167,29 @@
       <div class="col-lg-3">
         <span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
         <h2>Idea</h2>
-        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+        <p>Trabajamos con usted para entender sus necesidades y desarrollar un concepto a su medida.</p>
       </div><!-- /.col-lg-3 -->
       <div class="col-lg-3">
         <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-        <!-- <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140"> -->
         <h2>Diseño</h2>
-        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+        <p>Definimos medidas, materiales y especificaciones técnicas para construir un producto efectivo y de calidad.</p>
       </div><!-- /.col-lg-3 -->
       <div class="col-lg-3">
         <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-        <!-- <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140"> -->
         <h2>Producción</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+        <p>Hacemos realidad su idea en nuestra propia planta con maquinaria especializada y los mejores materiales para su proyecto. </p>
       </div><!-- /.col-lg-3 -->
       <div class="col-lg-3">
         <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-        <!-- <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140"> -->
         <h2>Implementación</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+        <p>Entregamos e instalamos un producto del que nos sentimos orgullosos en el tiempo pactado. Su negocio es nuestra prioridad.</p>
       </div><!-- /.col-lg-3 -->
     </div><!-- /.row -->
     <div class="row">
       <div class="col-lg-12">
-        <p id="button"><a class="btn btn-lg btn-info" id="btn-proc" href="#" role="button">MÁS SOBRE NUESTRO PROCESO</a></p>
+        <p id="button">
+          <%= link_to "MÁS SOBRE NUESTRO PROCESO", "#", class: "btn btn-lg btn-info", id: "btn-proc", role: "button" %>
+        </p>
       </div>
     </div>
   </div>
@@ -173,9 +203,18 @@
   <div class="row featurette">
     <div class="col-md-12">
       <h2 class="featurette-heading titulo" id="titulo-equipo">Nuestro equipo.</h2>
-      <br>
     </div>
   </div>
+
+  <div class="row contacto">
+    <div class="col-md-12">
+      <h3 id="equiparrafo">
+        <span>"</span>Contamos con un <span>equipo interdisciplinario</span> compuesto por profesionales experimentados en
+        las áreas del diseño, la ingeniería, la producción y la administración.<span>"</span>
+      </h3>
+    </div>
+  </div>
+  </br><br>
 
   <!-- Team members row one -->
   <div class="row">
@@ -289,11 +328,14 @@
   </div>
   <!-- /.row team two -->
   <br>
+
   <!-- NUESTRA HISTORIA button -->
   <div class="row contacto">
     <div class="col-md-12">
       <br>
-      <p><a class="btn btn-lg btn-info" href="#" role="button">NUESTRA HISTORIA</a></p>
+      <p>
+        <%= link_to "NUESTRA HISTORIA", "#", class: "btn btn-lg btn-info", role: "button" %>
+      </p>
     </div>
   </div>
 
