@@ -14,7 +14,12 @@
 
     <%= yield %>
 
-    <%= render 'layouts/footer' %>
+    <% if controller_name == "static_pages" && action_name == "contacto" %>
+      <%= render "layouts/footer_contacto" %>
+    <% else %>
+      <%= render "layouts/footer" %>
+    <% end %>
+  
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

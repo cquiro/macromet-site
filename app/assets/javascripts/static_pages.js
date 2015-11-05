@@ -109,13 +109,13 @@ onLoad(function() {
     // This removes the active class from all li elements of a nav
     // element and adds it to the element you click on.
   if ($("#homie").length) {
-    $('.nav li a').click(function(e) {
+    $('.nav li a:not(#noquery)').click(function(e) {
         $('.nav li').removeClass('active');
         var $parent = $(this).parent();
         if (!$parent.hasClass('active')) {
             $parent.addClass('active');
         }
-      e.preventDefault();
+        e.preventDefault();
     });
   }
 
