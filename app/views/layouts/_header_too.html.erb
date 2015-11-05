@@ -1,0 +1,29 @@
+<!-- NAVBAR
+================================================== -->
+
+<div class="navbar-wrapper">
+  <div class="container">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to image_tag("logo_blanco_sin_slogan.png", size: "180x62", alt: "Logo Macromet"), root_path, class: "page-scroll", id: "logo" %>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right"  id="top-menu">
+            <li><%= link_to "Portafolio", {:action => "home", :controller => "static_pages", :anchor => "portfolio"}, :class => "page-scroll" %></li>
+            <li><%= link_to "Proceso", {:action => "home", :controller => "static_pages", :anchor => "process"}, :class => "page-scroll" %></li>
+            <li><%= link_to "Equipo", {:action => "home", :controller => "static_pages", :anchor => "team"}, :class => "page-scroll" %></li>
+            <li><%= link_to "Contacto", contacto_path %></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
