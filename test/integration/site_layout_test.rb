@@ -13,6 +13,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
 
     get portafolio_path
     assert_template 'static_pages/portafolio'
+    assert_select "title", full_title("Portafolio")
     assert_select "a[href=?]", root_path, count:1
     assert_select "a[href=?]", contacto_path, count: 2
     assert_select "a[href=?]", '/#portfolio', count: 1
@@ -21,6 +22,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
 
     get proceso_path
     assert_template 'static_pages/proceso'
+    assert_select "title", full_title("Proceso")
     assert_select "a[href=?]", root_path, count:1
     assert_select "a[href=?]", contacto_path, count: 2
     assert_select "a[href=?]", '/#portfolio', count: 1
@@ -29,6 +31,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
 
     get historia_path
     assert_template 'static_pages/historia'
+    assert_select "title", full_title("Historia")
     assert_select "a[href=?]", root_path, count:1
     assert_select "a[href=?]", contacto_path, count: 2
     assert_select "a[href=?]", '/#portfolio', count: 1
@@ -37,6 +40,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
 
     get contacto_path
     assert_template 'static_pages/contacto'
+    assert_select "title", full_title("Contacto")
     assert_select "a[href=?]", root_path, count:1
     assert_select "a[href=?]", contacto_path, count: 1
     assert_select "a[href=?]", '/#portfolio', count: 1
