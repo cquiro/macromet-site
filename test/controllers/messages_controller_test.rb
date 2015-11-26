@@ -8,10 +8,10 @@ class MessagesControllerTest < ActionController::TestCase
 
   test "succesfull post" do
   	post :create, message: {
-  		name: "cornholio",
+  		nombre: "cornholio",
   		email: "cornholio@example.com",
-  		subject: "hi",
-  		content: "bai"
+  		asunto: "hi",
+  		mensaje: "bai"
   	}
 
   	assert_redirected_to new_message_path
@@ -19,13 +19,13 @@ class MessagesControllerTest < ActionController::TestCase
 
   test "failed post" do
   	post :create, message: {
-  		name: '',
+  		nombre: '',
   		email: '',
-  		subject: '',
-  		content: ''
+  		asunto: '',
+  		mensaje: ''
   	}
 
-  	[:name, :email, :subject, :content].each do |attr|
+  	[:nombre, :email, :asunto, :mensaje].each do |attr|
   		assert_select 'li', "#{attr.capitalize} can't be blank"
   	end
   end

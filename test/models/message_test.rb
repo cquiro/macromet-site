@@ -3,17 +3,17 @@ require 'test_helper'
 class MessageTest < ActiveSupport::TestCase
   test "responds to name, email, subject and content" do
   	msg = Message.new
-		[:name, :email, :subject, :content].each do |attr|
+		[:nombre, :email, :asunto, :mensaje].each do |attr|
 			assert msg.respond_to? attr
 		end
   end
 
   test "should accept valid attributes" do
   	valid_attrs = {
-  		name: "Pepe",
+  		nombre: "Pepe",
   		email: "pepe@cortisona.com",
-  		subject: "Ole, ole!",
-  		content: "Hola. Han visto a Condorito?"
+  		asunto: "Ole, ole!",
+  		mensaje: "Hola. Han visto a Condorito?"
   	}
 
   	msg = Message.new valid_attrs
