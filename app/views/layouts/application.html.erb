@@ -15,7 +15,7 @@
 
     <%= yield %>
 
-    <% if controller_name == "static_pages" && action_name == "contacto" %>
+    <% if controller_name == "messages" && action_name == "new" %>
       <%= render "layouts/footer_contacto" %>
     <% else %>
       <%= render "layouts/footer" %>

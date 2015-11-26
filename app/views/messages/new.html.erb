@@ -1,0 +1,61 @@
+<% provide(:title, "Contacto") %>
+
+<div class="jumbotron">
+  <div class="container marketing">
+    <h1>CONTACTO</h1>
+  </div>
+</div><!-- /.container -->
+
+<!-- contact form -->
+<div class="container marketing">
+
+	<%= form_for @message do |f| %>
+  	<% if @message.errors.any? %>
+  		<div id="error_explanation">
+  			<h2>
+  				<%= "#{pluralize(@message.errors.count, "error")} prohibited this message from being sent:" %>
+  			</h2>
+
+  			<ul>
+  				<% @message.errors.full_messages.each do |msg| %>
+  					<li><%= msg %></li>
+  				<% end %>
+  			</ul>
+  		</div>
+  	<% end %>
+
+  	<h1 class="contitle">
+			Trabajemos juntos.
+		</h1>
+
+		<h4 class="contitle" id="subcontitle">
+			Tenemos la experiencia y el talento para ayudarle a alcanzar sus metas.
+		</h4>
+
+		<hr>
+
+  	<div class="form-group">
+  		<%= f.label :nombre %>
+  		<%= f.text_field :name, class: "form-control" %>
+  	</div>
+
+  	<div class="form-group">
+  		<%= f.label :email %>
+  		<%= f.email_field :email, class: "form-control" %>
+  	</div>
+
+  	<div class="form-group">
+  		<%= f.label :Asunto %>
+  		<%= f.text_field :subject, class: "form-control" %>
+  	</div>
+
+  	<div class="form-group">
+  		<%= f.label :Mensaje %>
+  		<%= f.text_area :content, class: "form-control" %>
+  	</div>
+
+  	<div class="form-group">
+  		<%= f.submit 'Enviar', class: "btn btn-lg btn-primary", role: "button" %>
+  	</div>
+  <% end %>
+</div> <!-- end of container -->

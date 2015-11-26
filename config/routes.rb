@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :messages, only: [:new, :create]
+
   root  'static_pages#home'
 
   get 'portafolio'  =>  'static_pages#portafolio'
