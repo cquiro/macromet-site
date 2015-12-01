@@ -7,6 +7,7 @@ class MessagesController < ApplicationController
   	@message = Message.new(message_params)
 
   	if @message.valid?
+      MessageMailer.message_me(@message).deliver_now
   		redirect_to new_message_path, notice: "Gracias por contactarnos. Pronto nos comunicaremos con usted."
   	else
   		render :new

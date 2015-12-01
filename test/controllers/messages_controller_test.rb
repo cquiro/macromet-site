@@ -7,14 +7,24 @@ class MessagesControllerTest < ActionController::TestCase
   end
 
   test "succesfull post" do
-  	post :create, message: {
-  		nombre: "cornholio",
-  		email: "cornholio@example.com",
-  		asunto: "hi",
-  		mensaje: "bai"
-  	}
+    assert_difference "ActionMailer::Base.deliveries.size", 1 do
+    	post :create, message: {
+    		nombre: "cornholio",
+    		email: "cornholio@example.com",
+    		asunto: "hi",
+    		mensaje: "bai"
+    	}
+    end
 
   	assert_redirected_to new_message_path
+    last_email = ActionMailer::Base.deliveries.last
+
+    assert_equal "hi", last_email.subject
+    assert_equal "stephen@example.com", last_email.to[0]
+    assert_equal "cornholio@example.com", last_email.from[0]
+    assert_match(/bai/, last_email.body.to_s)
+
+    ActionMailer::Base.deliveries.clear
   end
 
   test "failed post" do
