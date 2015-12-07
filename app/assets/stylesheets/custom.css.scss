@@ -38,6 +38,10 @@ html, body {
   }
 }
 
+.notice {
+  color: $macromet-darkblue;
+}
+
 img {
   max-width: 100%;
   display: inline-block;
@@ -123,7 +127,7 @@ img {
 
 /* Carousel base class */
 .carousel {
-  height: 750px;
+  height: auto;
   margin-bottom: 0px;
 }
 
@@ -235,7 +239,7 @@ img {
 
 .process {
   margin-top: 90px;
-  background-color: $macromet-red;
+  background-color: $macromet-darkblue;
   width: 100%;
   color: $macromet-white;
   padding-bottom: 60px;
@@ -323,19 +327,19 @@ img {
 }
 
 .macro-darkblue {
-  background: $macromet-darkblue;
+  background: rgba(26, 160, 224, 0.5);
 }
 
 .macro-medblue {
-  background: $macromet-medblue;
+  background: rgba(133, 208, 243, 0.5);
 }
 
 .macro-red {
-  background: $macromet-red;
+  background: rgba(255, 89, 94, 0.5);
 }
 
 .macro-yellow {
-  background: $macromet-yellow;
+  background: rgba(255, 202, 58, 0.5);
 }
 
 /* Contacto */
@@ -406,7 +410,8 @@ footer {
 -------------------------------------------------- */
 
 .jumbotron {
-    background: url('http://placekitten.com/800/500') no-repeat center center;
+    background-image: url("/assets/banner.png"); 
+    
     background-size: cover;
     color: $macromet-white;
     text-shadow: 1px 1px 2px rgba( 0, 0, 0, 0.45 );
@@ -464,6 +469,27 @@ footer {
 }
 
 
+/* HISTORIA CSS
+-------------------------------------------------- */
+
+.imagen-historia {
+  float: left;
+  margin-top: 5px;
+  margin-right: 25px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: $macromet-darkblue;
+  figcaption {
+    margin-top: 5px;
+  }
+}
+
+.content-history h3 {
+  text-align: justify;
+}
+
+
+
 
 
 /* CREACION DE USUARIO CSS
@@ -482,6 +508,14 @@ form {
 
 .contitle {
   margin-bottom: 20px;
+}
+
+h1.contitle{
+  margin-top: 0;
+}
+
+.nominferior {
+  margin-bottom: 0;
 }
 
 #subcontitle {
@@ -528,6 +562,34 @@ form {
   .carousel-caption {
     p {
       font-size: 1.3em;
+    }
+  }
+
+  form {
+    width: 90%;
+    margin: 50px auto 0;
+  }
+
+  .title-history {
+    font-size: 2.2em;
+    text-align: center;
+  }
+
+  .content-history {
+    h3 {
+      font-size: 1.3em;
+    }
+    .imagen-historia {
+      float: none;
+      display: block;
+      margin: auto;
+      img {
+        display: block;
+      }
+      figcaption {
+        text-align: center;
+        margin-bottom: 20px;
+      }
     }
   }
 }

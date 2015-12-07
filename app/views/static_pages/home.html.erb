@@ -10,6 +10,7 @@
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="item active">
+      
       <img class="first-slide" src="http://lorempixel.com/1200/600/people" alt="First slide">
       <div class="container">
         <div class="carousel-caption">
@@ -22,7 +23,8 @@
       </div>
     </div>
     <div class="item">
-      <img class="second-slide" src="http://lorempixel.com/1200/600/city" alt="Second slide">
+      <%= image_tag "Macromet_ComedyCentral.png", size: "750x1450", alt: "Proyecto Comedy Central", class: "second-slide image-responsive" %>
+      <!-- <img class="second-slide" src="http://lorempixel.com/1200/600/city" alt="Second slide"> -->
       <div class="container">
         <div class="carousel-caption">
           <h1>EXPANDIMOS NUESTROS HORIZONTES.</h1>
@@ -34,10 +36,11 @@
       </div>
     </div>
     <div class="item">
-      <img class="third-slide" src="http://lorempixel.com/1200/600/sports" alt="Third slide">
+      <%= image_tag "Macromet_Familia.png", size: "750x1450", alt: "Familia", class: "third-slide image-responsive" %>
+      <!-- <img class="third-slide" src="http://lorempixel.com/1200/600/sports" alt="Third slide"> -->
       <div class="container">
         <div class="carousel-caption">
-          <h1>TRADICIÓN DE CALIDAD.</h1>
+          <h1>TRADICIÓN.</h1>
           <p>Más de 27 años construyendo país.</p>
           <p>
             <%= link_to "Nuestra historia", historia_path, class: "btn btn-lg btn-primary", role: "button" %>
@@ -179,13 +182,13 @@
         <p>Entregamos e instalamos un producto del que nos sentimos orgullosos en el tiempo pactado. Su negocio es nuestra prioridad.</p>
       </div><!-- /.col-lg-3 -->
     </div><!-- /.row -->
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-lg-12">
         <p id="button">
-          <%= link_to "MÁS SOBRE NUESTRO PROCESO", proceso_path, class: "btn btn-lg btn-info", id: "btn-proc", role: "button" %>
+          <%#= link_to "MÁS SOBRE NUESTRO PROCESO", proceso_path, class: "btn btn-lg btn-info", id: "btn-proc", role: "button" %>
         </p>
       </div>
-    </div>
+    </div> -->
   </div>
 </div><!-- container process -->
 
@@ -224,7 +227,7 @@
             apoyando el desarrollo de la industria colombiana.
           </p>
         </div>
-        <img class="img-responsive" src="http://placehold.it/750x750" alt="">
+        <%= image_tag "Macromet_Tatiana.png", alt: "Tatiana Acuña", class: "image-responsive" %>
       </div>
     </div>
     <div class="col-md-3 portfolio-item">
@@ -240,7 +243,7 @@
           </p>
           </p>
         </div>
-        <img class="img-responsive" src="http://placehold.it/750x750" alt="">
+        <%= image_tag "Macromet_Alejandro.png", alt: "Alejandro Acuña", class: "image-responsive" %>
       </div>
     </div>
     <div class="col-md-3 portfolio-item">
@@ -255,7 +258,7 @@
             Ocho años de experiencia diseñando e implementando proyectos de vivienda social a lo largo del territorio colombiano.
           </p>
         </div>
-        <img class="img-responsive" src="http://placehold.it/750x750" alt="">
+        <%= image_tag "Macromet_Giselle.png", alt: "Giselle Acuña", class: "image-responsive" %>
       </div>
     </div>
     <div class="col-md-3 portfolio-item">
@@ -270,7 +273,7 @@
             desarrollando negocios en Latinoamerica y Japón.
           </p>
         </div>
-        <img class="img-responsive" src="http://placehold.it/750x750" alt="">
+        <%= image_tag "Macromet_Felipe.png", alt: "Felipe Acuña", class: "image-responsive" %>
       </div>
     </div>
   </div>
@@ -285,7 +288,7 @@
           <h3>Johan Chacón</h3>
           <p>Coordinador de Compras y Producción</p>
         </div>
-        <img class="img-responsive" src="http://placehold.it/750x750" alt="">
+        <%= image_tag "Macromet_Johan.png", alt: "Johan Chacón", class: "image-responsive" %>
       </div>
     </div>
     <div class="col-md-3 portfolio-item">
@@ -296,27 +299,17 @@
           <p>Coordinador de Planta</p>
           </p>
         </div>
-        <img class="img-responsive" src="http://placehold.it/750x750" alt="">
+        <%= image_tag "Macromet_Jerry.png", alt: "Jerry Cubillos", class: "image-responsive" %>
       </div>
     </div>
     <div class="col-md-3 portfolio-item">
       <div class="team-member">
         <div class="team-description macro-darkblue">
           <br>
-          <h3>Camilo Granados</h3>
-          <p>Diseñador Industrial</p>
+          <h3>Lorena Angulo</h3>
+          <p>Asistente Administrativo</p>
         </div>
-        <img class="img-responsive" src="http://placehold.it/750x750" alt="">
-      </div>
-    </div>
-    <div class="col-md-3 portfolio-item">
-      <div class="team-member">
-        <div class="team-description macro-medblue">
-          <br>
-          <h3>Nelson Umaña</h3>
-          <p>Diseñador Gráfico</p>
-        </div>
-        <img class="img-responsive" src="http://placehold.it/750x750" alt="">
+        <%= image_tag "Macromet_Lorena.png", alt: "Lorena Angulo", class: "image-responsive" %>
       </div>
     </div>
   </div>

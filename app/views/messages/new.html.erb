@@ -1,6 +1,6 @@
 <% provide(:title, "Contacto") %>
 
-<div class="jumbotron">
+<div class="jumbotron nominferior">
   <div class="container marketing">
     <h1>CONTACTO</h1>
   </div>
@@ -23,6 +23,8 @@
   			</ul>
   		</div>
   	<% end %>
+
+    <p class="notice"><%= flash[:notice] %></p>
 
   	<h1 class="contitle">
 			Trabajemos juntos.

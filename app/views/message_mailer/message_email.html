@@ -1,1 +1,15 @@
-message_email.html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>El siguiente mensaje ha sido enviado por <%= @msg.nombre %>:</h1>
+    <p>
+     <%= @msg.mensaje %>.<br>
+    </p>
+    <p>
+    	Para responder a este mensaje escriba a <%= @msg.email %>.
+    </p>
+  </body>
+</html>
