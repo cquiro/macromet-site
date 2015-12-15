@@ -20,7 +20,7 @@ class MessagesControllerTest < ActionController::TestCase
     last_email = ActionMailer::Base.deliveries.last
 
     assert_equal "hi", last_email.subject
-    assert_equal "stephen@example.com", last_email.to[0]
+    assert_equal "quiroga.developer@gmail.com", last_email.to[0]
     assert_equal "cornholio@example.com", last_email.from[0]
     assert_match(/bai/, last_email.body.to_s)
 
