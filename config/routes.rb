@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :messages, only: [:new, :create]
+  # resources :messages, only: [:new, :create]
 
   root  'static_pages#home'
 
@@ -10,7 +10,9 @@ Rails.application.routes.draw do
 
   get 'historia'  =>  'static_pages#historia'
 
-  get 'contacto'  =>  'static_pages#contacto'
+  get 'contacto',  to:  'messages#new', as: 'contacto'
+
+  post 'contacto', to: 'messages#create'
 
   get 'usuario_nuevo'  =>  'users#new'
 

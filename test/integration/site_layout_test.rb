@@ -38,10 +38,10 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", '/#team', count: 1
 
     get contacto_path
-    assert_template 'static_pages/contacto'
+    assert_template 'messages/new'
     assert_select "title", full_title("Contacto")
     assert_select "a[href=?]", root_path, count:1
-    # assert_select "a[href=?]", contacto_path, count: 1
+    assert_select "a[href=?]", contacto_path, count: 1
     assert_select "a[href=?]", '/#portfolio', count: 1
     assert_select "a[href=?]", '/#process', count: 1
     assert_select "a[href=?]", '/#team', count: 1

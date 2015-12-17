@@ -4,6 +4,6 @@ class MessageMailer < ApplicationMailer
 	def message_me(msg)
 		@msg = msg
 
-		mail from: @msg.email, subject: @msg.asunto, body: @msg.mensaje
+		mail from: @msg.email, subject: @msg.asunto
 	end
 end

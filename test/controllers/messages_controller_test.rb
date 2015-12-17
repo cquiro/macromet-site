@@ -1,9 +1,14 @@
 require 'test_helper'
 
 class MessagesControllerTest < ActionController::TestCase
+  def setup
+    @base_title = "Macromet"
+  end
+
   test "should get new" do
     get :new
     assert_response :success
+    assert_select "title", "Contacto | #{@base_title}"
   end
 
   test "succesfull post" do
@@ -16,7 +21,7 @@ class MessagesControllerTest < ActionController::TestCase
     	}
     end
 
-  	assert_redirected_to new_message_path
+  	assert_redirected_to contacto_path
     last_email = ActionMailer::Base.deliveries.last
 
     assert_equal "hi", last_email.subject
