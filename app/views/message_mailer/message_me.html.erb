@@ -5,11 +5,11 @@
   </head>
   <body>
     <h1>El siguiente mensaje ha sido enviado por <%= @msg.nombre %>:</h1>
+    <h2>
+     "<%= @msg.mensaje %>"<br>
+    </h2>
     <p>
-     <%= @msg.mensaje %><br>
-    </p>
-    <p>
-    	Para responder a este mensaje escriba a <%= @msg.email %>.
+    	Para responder a este mensaje escriba a <strong><%= @msg.email %></strong>.
     </p>
   </body>
 </html>
