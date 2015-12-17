@@ -2,14 +2,17 @@
 <html>
   <head>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <style>
+      .name-messager { color: #1AA0E0; }
+    </style>
   </head>
   <body>
-    <h1>El siguiente mensaje ha sido enviado por <span style="color:$macormet-darkblue;"><%= @msg.nombre %></span>:</h1>
-    <h2>
+    <h1>El siguiente mensaje ha sido enviado por <span class="name-messager"><%= @msg.nombre %></span>:</h1>
+    <h3>
      "<%= @msg.mensaje %>"<br>
-    </h2>
-    <p>
+    </h3>
+    <h4>
     	Para responder a este mensaje escriba a <strong><%= @msg.email %></strong>.
-    </p>
+    </h4>
   </body>
 </html>
