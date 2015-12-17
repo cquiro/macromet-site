@@ -1,5 +1,5 @@
 class MessageMailer < ApplicationMailer
-	default to: "quiroga.developer@gmail.com"
+	default to: "info@macromet.com.co"
 	
 	def message_me(msg)
 		@msg = msg
