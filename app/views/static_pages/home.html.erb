@@ -10,8 +10,9 @@
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      
-      <img class="first-slide" src="http://lorempixel.com/1200/600/people" alt="First slide">
+      <%= image_tag "Macromet_BannerExhibicion.png", size: "750x1450", 
+                                                    alt: "Exhibición", 
+                                                    class: "first-slide image-responsive" %>
       <div class="container">
         <div class="carousel-caption">
           <h1>IMPULSO E INNOVACIÓN PARA SU MARCA</h1>
@@ -23,8 +24,9 @@
       </div>
     </div>
     <div class="item">
-      <%= image_tag "Macromet_ComedyCentral3.png", size: "750x1450", alt: "Proyecto Comedy Central", class: "second-slide image-responsive" %>
-      <!-- <img class="second-slide" src="http://lorempixel.com/1200/600/city" alt="Second slide"> -->
+      <%= image_tag "Macromet_ComedyCentral3.png", size: "750x1450", 
+                                                    alt: "Proyecto Comedy Central", 
+                                                    class: "second-slide image-responsive" %>
       <div class="container">
         <div class="carousel-caption">
           <h1>EXPANDIMOS NUESTROS HORIZONTES</h1>
@@ -36,8 +38,9 @@
       </div>
     </div>
     <div class="item">
-      <%= image_tag "Macromet_Familia_cortaNashville.png", size: "750x1450", alt: "Familia", class: "third-slide image-responsive" %>
-      <!-- <img class="third-slide" src="http://lorempixel.com/1200/600/sports" alt="Third slide"> -->
+      <%= image_tag "Macromet_Familia_cortaNashville.png", size: "750x1450", 
+                                                            alt: "Familia", 
+                                                            class: "third-slide image-responsive" %>
       <div class="container">
         <div class="carousel-caption">
           <h1>TRADICIÓN</h1>
@@ -104,7 +107,13 @@
       </p>
     </div>
     <div class="col-md-5">
-      <%= link_to image_tag("Macromet_ExhibicionMJ_Pequeña.png", size: "500x500", alt: "Producto"), '#', class: "featurette-image img-responsive center-block pull-right" %>
+      <%= image_tag "Macromet_ExhibicionMJ.png", size: "250x250", 
+                                                          alt: "Exhibición", 
+                                                          class: "img-circle" %>
+<!--       <%#= link_to image_tag("Macromet_ExhibicionMJ_Pequeña.png",
+                              size: "500x500", 
+                              alt: "Producto"), '#', 
+                              class: "featurette-image img-responsive center-block pull-right img-circle" %> -->
     </div>
   </div>
 
@@ -123,7 +132,10 @@
       </p>
     </div>
     <div class="col-md-5 col-md-pull-7">
-      <%= link_to image_tag("Macromet_ComedyCentral_Ambientacion.png", size: "500x500", alt: "Producto"), '#', class: "featurette-image img-responsive center-block" %>
+      <%= image_tag "Macromet_ComedyCentral_Ambientacion.png", size: "250x250", 
+                                                                alt: "Ambientación", 
+                                                                class: "img-circle" %>
+      <!-- <%#= link_to image_tag("Macromet_ComedyCentral_Ambientacion.png", size: "500x500", alt: "Producto"), '#', class: "featurette-image img-responsive center-block" %> -->
     </div>
   </div>
 
@@ -143,7 +155,10 @@
       </p>
     </div>
     <div class="col-md-5">
-      <%= link_to image_tag("fs_peq_castrol.png", size: "227x478", alt: "Producto"), '#', class: "featurette-image img-responsive center-block pull-right" %>
+      <%= image_tag "Macromet_Soluciones.png", size: "250x250", 
+                                                alt: "Ambientación", 
+                                                class: "img-circle" %>
+      <!-- <%#= link_to image_tag("fs_peq_castrol.png", size: "227x478", alt: "Producto"), '#', class: "featurette-image img-responsive center-block pull-right" %> -->
     </div>
   </div>
 </div>
@@ -306,10 +321,10 @@
       <div class="team-member">
         <div class="team-description macro-darkblue">
           <br>
-          <h3>Lorena Angulo</h3>
+          <h3>Fabian Torres</h3>
           <p>Asistente Administrativo</p>
         </div>
-        <%= image_tag "Macromet_Lorena.png", alt: "Lorena Angulo", class: "image-responsive" %>
+        <%= image_tag "Macromet_Fabian.png", alt: "Fabian Torres", class: "image-responsive" %>
       </div>
     </div>
   </div>
