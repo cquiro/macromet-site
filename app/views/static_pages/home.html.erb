@@ -95,7 +95,12 @@
   <!-- Negocio 1 -->
 
   <div class="row featurette">
-    <div class="col-md-7">
+    <div class="col-md-4 col-md-push-8">
+      <%= image_tag "Macromet_ExhibicionMJ.png", size: "250x250", 
+                                                          alt: "Exhibición", 
+                                                          class: "img-circle-right" %>
+    </div>
+    <div class="col-md-8 col-md-pull-4">
       <h2 class="featurette-heading">Exhibición. <span class="text-muted">Hacemos que su producto sobresalga.</span></h2>
       <p class="lead">
         Diseñamos, fabricamos e implementamos todo tipo de muebles y exhibidores para punto de venta.
@@ -103,62 +108,53 @@
         resaltar su marca.
       </p>
       <p>
-        <%= link_to "CASOS DE ÉXITO", portafolio_path, class: "btn btn-lg btn-info", role: "button" %>
+        <%= link_to "CASOS DE ÉXITO", portafolio_path, class: "btn btn-lg btn-info btnport", role: "button" %>
       </p>
-    </div>
-    <div class="col-md-5">
-      <%= image_tag "Macromet_ExhibicionMJ.png", size: "250x250", 
-                                                          alt: "Exhibición", 
-                                                          class: "img-circle" %>
-<!--       <%#= link_to image_tag("Macromet_ExhibicionMJ_Pequeña.png",
-                              size: "500x500", 
-                              alt: "Producto"), '#', 
-                              class: "featurette-image img-responsive center-block pull-right img-circle" %> -->
     </div>
   </div>
 
   <hr class="featurette-divider">
 
+
   <!-- Negocio 2 -->
 
   <div class="row featurette">
-    <div class="col-md-7 col-md-push-5">
+    <div class="col-md-4">
+      <%= image_tag "Macromet_ComedyCentral_Ambientacion.png", size: "250x250", 
+                                                                alt: "Ambientación", 
+                                                                class: "img-circle-left" %>
+    </div>
+    <div class="col-md-8">
       <h2 class="featurette-heading">Ambientación. <span class="text-muted">Creamos espacios memorables.</span></h2>
       <p class="lead">
         Desarrollamos proyectos exitosos de ambientación incluyendo stands, locales comerciales y escenografías.
       </p>
       <p>
-        <%= link_to "CASOS DE ÉXITO", portafolio_path, class: "btn btn-lg btn-info", role: "button" %>
+        <%= link_to "CASOS DE ÉXITO", portafolio_path, class: "btn btn-lg btn-info btnport", role: "button" %>
       </p>
-    </div>
-    <div class="col-md-5 col-md-pull-7">
-      <%= image_tag "Macromet_ComedyCentral_Ambientacion.png", size: "250x250", 
-                                                                alt: "Ambientación", 
-                                                                class: "img-circle" %>
-      <!-- <%#= link_to image_tag("Macromet_ComedyCentral_Ambientacion.png", size: "500x500", alt: "Producto"), '#', class: "featurette-image img-responsive center-block" %> -->
     </div>
   </div>
 
   <hr class="featurette-divider">
 
+  
   <!-- Negocio 3 -->
 
   <div class="row featurette">
-    <div class="col-md-7">
+    <div class="col-md-4 col-md-push-8">
+      <%= image_tag "Macromet_Soluciones.png", size: "250x250", 
+                                                alt: "Ambientación", 
+                                                class: "img-circle-right" %>
+    </div>
+    <div class="col-md-8 col-md-pull-4">
       <h2 class="featurette-heading">Soluciones. <span class="text-muted">Productos a la medida de nuestro país.</span></h2>
       <p class="lead">
         A lo largo de nuestra historia hemos desarrollado proyectos estructurales para todo tipo de industrias y
         en muchas ocasiones hemos asumido nuevos retos para solucionar los problemas de nuestros clientes más exigentes.
       </p>
       <p>
-        <%= link_to "CASOS DE ÉXITO", portafolio_path, class: "btn btn-lg btn-info", role: "button" %>
+        <%= link_to "CASOS DE ÉXITO", portafolio_path, class: "btn btn-lg btn-info btnport", role: "button" %>
       </p>
-    </div>
-    <div class="col-md-5">
-      <%= image_tag "Macromet_Soluciones.png", size: "250x250", 
-                                                alt: "Ambientación", 
-                                                class: "img-circle" %>
-      <!-- <%#= link_to image_tag("fs_peq_castrol.png", size: "227x478", alt: "Producto"), '#', class: "featurette-image img-responsive center-block pull-right" %> -->
     </div>
   </div>
 </div>
