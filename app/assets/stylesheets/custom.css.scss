@@ -80,9 +80,15 @@ img {
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
-
 .nav.navbar-nav.navbar-right .active a {
-  color: $macromet-darkblue;
+  border-bottom: thick solid $macromet-darkblue;
+  background: none;
+  //background: rgba(60, 90, 120, 0.6);
+  //color: $macromet-darkblue;
+}
+
+.nav.navbar-nav.navbar-right > li > a {
+  color: white;
 }
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
@@ -103,7 +109,8 @@ img {
 .navbar-wrapper .navbar {
   padding-right: 15px;
   padding-left: 15px;
-  opacity: 0.9;
+  background: rgba(0, 0, 0, 0.6);
+  border-color: rgb(0, 0, 0);
 }
 
 .navbar-wrapper .navbar .container {
@@ -122,6 +129,8 @@ img {
 #logo {
   padding-left: 50px;
 }
+
+
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
@@ -151,13 +160,20 @@ img {
   min-right: 6%;
   left: 6%;
   h1 {
-    font-size: 3.3em;
+    text-shadow: 1px 1px 1px rgba( 0, 0, 0, 0.3 );
+    font-size: 3.9em;
     text-align: left;
   }
   p {
+    text-shadow: 1px 1px 1px rgba( 0, 0, 0, 0.3 );
     text-align: left;
   }
+}
 
+.carousel-control.left, .carousel-control.right {
+   background-image:none;
+   filter:none;
+   opacity: 1;
 }
 
 /* Declare heights because of positioning of img element */
@@ -165,6 +181,7 @@ img {
   height: 750px;
   background-color: #777;
 }
+
 .carousel-inner > .item > img {
   position: absolute;
   top: 0;
@@ -461,7 +478,6 @@ footer {
 -------------------------------------------------- */
 
 
-
 // customization of panels on the portafolio page
 .panel > .panel-heading {
   background-image: none;
@@ -490,12 +506,13 @@ footer {
 .nav-pills > li > a,
 .nav-pills > li > a:focus {
   color: $macromet-darkblue;
-  font-size: 1.1em;
+  font-size: 1.4em;
 }
+
 .nav-pills > li > a:hover{
   background-color: $macromet-medblue;
   color: $macromet-white;
-  font-size: 1.1em;
+  font-size: 1.4em;
 }
 
 
@@ -580,6 +597,21 @@ h1.contitle{
 
 @media (max-width: 992px) {
 
+/*------ CAROUSEL ------*/
+
+.carousel .item {
+  height: 500px;
+  background-color: #777;
+}
+
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+
 
 /*------ FOOTER ------*/
 
@@ -635,7 +667,7 @@ h1.contitle{
     margin: 50px auto 0;
   }
 
-  .title-history {
+  title-history {
     font-size: 2.2em;
     text-align: center;
   }

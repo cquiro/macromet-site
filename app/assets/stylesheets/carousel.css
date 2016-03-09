@@ -33,6 +33,11 @@ body {
   width: auto;
 }
 
+.navbar-nav > li > a {
+  color: white;
+}
+
+
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
