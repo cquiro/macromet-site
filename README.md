@@ -1,3 +1,3 @@
 == Macromet's Website
 
-New website for Point-of-Purchase (POP) Marketing agency Macromet.
+Website for Point-of-Purchase (POP) Marketing agency Macromet.
