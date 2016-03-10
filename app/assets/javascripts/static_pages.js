@@ -11,6 +11,9 @@ onLoad(function() {
   );
 
 // ================================================================================
+  $("button.navbar-toggle").click(function () {
+    $("#top-menu").toggle();
+  });
 
 //   // ================================================================================
 
@@ -53,7 +56,6 @@ onLoad(function() {
       e.preventDefault();
     });
 
-
     $('#exhibit').click(function() {
       $("#porta-am, #porta-so").hide();
       $("#porta-ex").show();
@@ -68,7 +70,9 @@ onLoad(function() {
       $('#porta-ex, #porta-am').hide();
       $('#porta-so').show();
     });
+
   });
+
 });
 
 
