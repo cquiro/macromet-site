@@ -11,7 +11,7 @@ onLoad(function() {
   );
 
 // ================================================================================
-  $("button.navbar-toggle").click(function () {
+  $("button.navbar-t").click(function () {
     $("#top-menu").toggle();
   });
 

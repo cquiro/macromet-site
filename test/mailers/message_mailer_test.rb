@@ -13,9 +13,9 @@ class MessageMailerTest < ActionMailer::TestCase
 
   	refute ActionMailer::Base.deliveries.empty?
 
-  	assert_equal  ["quiroga.developer@gmail.com"], email.to
+  	assert_equal  ["info@macromet.com.co"], email.to
   	assert_equal	["cornholio@example.com"], email.from
   	assert_equal	"Ole", email.subject
-  	assert_equal	"Mail de prueba Macromet.", email.body.to_s
+    assert_includes email.body.to_s, msg.mensaje
   end
 end
