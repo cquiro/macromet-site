@@ -12,6 +12,16 @@ $macromet-yellow: #FFCA3A;
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
+a:hover.gray,
+a:visited.gray,
+a:active.gray, {
+  color: #5a5a5a;
+}
+
+.gray {
+  color: #5a5a5a;
+}
+
 body {
   position: relative;
   padding-bottom: 40px;

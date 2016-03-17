@@ -23,16 +23,34 @@
     <div class="row">
       <div class="col-md-6">
         <ul class="contact-info">
-          <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;&nbsp;info@macromet.com.co</li>
+          <li>
+            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;&nbsp;
+            <a class="gray" href="mailto:info@macromet.com.co">info@macromet.com.co</a>
+          </li>
           <li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>&nbsp;&nbsp;(571) 814 2291- (571) 547 7107</li>
           <li><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;&nbsp;Calle 75 A # 61 - 20, Bogotá, Colombia.</li>
         </ul>
       </div>
       <div class="col-md-6">
         <ul class="social-links">
-          <li><i class="fa fa-linkedin fa-2x"></i></li>
-          <li><i class="fa fa-instagram fa-2x"></i></li>
-          <li><i class="fa fa-facebook fa-2x"></i></li>
+          <li>
+            <%= link_to '<i class="fa fa-linkedin fa-2x"></i>'.html_safe, 
+                        "https://www.linkedin.com/company/macromet?trk=company_logo", 
+                        :target => "_blank", 
+                        class: "gray" %>
+          </li>
+          <li>
+            <%= link_to '<i class="fa fa-instagram fa-2x"></i>'.html_safe, 
+                        "https://www.instagram.com/macromet_bogota/", 
+                        :target => "_blank", 
+                        class: "gray" %>
+          </li>
+          <li>
+            <%= link_to '<i class="fa fa-facebook fa-2x"></i>'.html_safe, 
+                        "#", 
+                        :target => "_blank", 
+                        class: "gray" %>
+          </li>
         </ul>
       </div>
       <div class="row">
