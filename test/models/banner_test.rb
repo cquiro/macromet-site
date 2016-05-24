@@ -7,6 +7,7 @@ class BannerTest < ActiveSupport::TestCase
                           subtitle: "Ocho años conectando productos de calidad con el consumidor final",
                           button: "Exhibición",
                           image: "Some Image")
+    load "#{Rails.root}/db/seeds.rb"
   end
 
   test "should be valid" do
