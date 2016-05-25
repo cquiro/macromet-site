@@ -1,0 +1,16 @@
+<h1><%= @banner1.name %></h1>
+<%= form_for banner_path(@banner1), url: {:controller=>"banners_controller", :action=>"update"}, html: { method: :patch } do |form| %>
+
+
+  <%= form.label :title, "Título" %>
+  <%= form.text_field :title %>
+
+  <%= form.label :subtitle, "Subtítulo" %>
+  <%= form.text_field :subtitle %>
+
+  <%= form.label :button, "Botón" %>
+  <%= form.text_field :button %>
+
+  <%= form.submit "Actualizar" %>
+
+<% end %>
