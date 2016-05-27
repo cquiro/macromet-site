@@ -1,16 +1,57 @@
-<h1><%= @banner1.name %></h1>
-<%= form_for banner_path(@banner1), url: {:controller=>"banners_controller", :action=>"update"}, html: { method: :patch } do |form| %>
+<% provide(:title, "Contenido - Banners") %>
+
+<div class="contejumbo nominferior">
+  <div class="container marketing">
+    <h1>MANEJO DE CONTENIDO - <%= @banner.name %></h1>
+  </div>
+</div><!-- /.container -->
 
 
-  <%= form.label :title, "Título" %>
-  <%= form.text_field :title %>
+<!-- contact form -->
+<div class="container marketing">
 
-  <%= form.label :subtitle, "Subtítulo" %>
-  <%= form.text_field :subtitle %>
 
-  <%= form.label :button, "Botón" %>
-  <%= form.text_field :button %>
+<%= form_for @banner do |form| %>
 
-  <%= form.submit "Actualizar" %>
+  <% if @banner.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= "#{pluralize(@banner.errors.count, "error")} prohibited this message from being sent:" %>
+      </h2>
+
+      <ul>
+        <% @banner.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p class="notice"><%= flash[:notice] %></p>
+  
+  <div class="form-group">
+    <%= form.label :title, "Título" %>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :subtitle, "Subtítulo" %>
+    <%= form.text_field :subtitle, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :button, "Botón" %>
+    <%= form.text_field :button, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.submit "Actualizar", class: "btn btn-lg btn-primary", role: "button" %>
+  </div>
 
 <% end %>
+
+
+
+</div>
+
+

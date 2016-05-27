@@ -16,9 +16,11 @@ Rails.application.routes.draw do
 
   get   'usuario_nuevo'  =>  'users#new'
 
-  get   'edit', to: 'banners#edit'
+  resources :banners, only: [:update, :edit]
+  # get   'banners/edit', to: 'banners#edit', as: "contenido_principal"
+  # patch 'banner/update', to: 'banners#update', as: "banner_update"
 
-  patch 'banners/:id', to: 'banners#update', as: 'banner'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
