@@ -2,7 +2,7 @@
 
 <div class="contejumbo nominferior">
   <div class="container marketing">
-    <h1>MANEJO DE CONTENIDO - <%= @banner.name %></h1>
+    <h1>MANEJO DE CONTENIDO - <%= @banner.name %></h1><br>
   </div>
 </div><!-- /.container -->
 
@@ -26,8 +26,6 @@
       </ul>
     </div>
   <% end %>
-
-  <p class="notice"><%= flash[:notice] %></p>
   
   <div class="form-group">
     <%= form.label :title, "Título" %>
@@ -46,6 +44,7 @@
 
   <div class="form-group">
     <%= form.submit "Actualizar", class: "btn btn-lg btn-primary", role: "button" %>
+    <%= link_to "Ir a manejo de contenido", contenido_path, class: "btn btn-lg btn-primary", role: "button" %>
   </div>
 
 <% end %>

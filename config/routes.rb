@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
   get   'usuario_nuevo'  =>  'users#new'
 
+  get   'contenido', to: 'static_pages#contenido'
+
   resources :banners, only: [:update, :edit]
   # get   'banners/edit', to: 'banners#edit', as: "contenido_principal"
   # patch 'banner/update', to: 'banners#update', as: "banner_update"

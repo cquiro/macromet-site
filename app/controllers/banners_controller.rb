@@ -8,9 +8,7 @@ class BannersController < ApplicationController
     @banner = Banner.find(params[:id])
     
     if @banner.update_attributes(banner_params)
-      flash[:notice] = "El #{@banner.name} ha sido actualizado."
-      # redirect_to contacto_path, notice: "Gracias por contactarnos. Pronto nos comunicaremos con usted."
-      render action: :edit#, notice: "El #{@banner.name} ha sido actualizado."
+      redirect_to contenido_path, notice: "El #{@banner.name} ha sido actualizado."
     else
       flash[:error] = "El banner no se pudo actualizar. Intente de nuevo."
       render action: :edit

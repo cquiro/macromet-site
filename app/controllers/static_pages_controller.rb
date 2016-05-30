@@ -13,4 +13,7 @@ class StaticPagesController < ApplicationController
 
   def contacto
   end
+
+  def contenido
+  end
 end
