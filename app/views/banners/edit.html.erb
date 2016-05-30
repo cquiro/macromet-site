@@ -1,0 +1,56 @@
+<% provide(:title, "Contenido - Banners") %>
+
+<div class="contejumbo nominferior">
+  <div class="container marketing">
+    <h1>MANEJO DE CONTENIDO - <%= @banner.name %></h1><br>
+  </div>
+</div><!-- /.container -->
+
+
+<!-- contact form -->
+<div class="container marketing">
+
+
+<%= form_for @banner do |form| %>
+
+  <% if @banner.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= "#{pluralize(@banner.errors.count, "error")} prohibited this message from being sent:" %>
+      </h2>
+
+      <ul>
+        <% @banner.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="form-group">
+    <%= form.label :title, "Título" %>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :subtitle, "Subtítulo" %>
+    <%= form.text_field :subtitle, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :button, "Botón" %>
+    <%= form.text_field :button, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.submit "Actualizar", class: "btn btn-lg btn-primary", role: "button" %>
+    <%= link_to "Ir a manejo de contenido", contenido_path, class: "btn btn-lg btn-primary", role: "button" %>
+  </div>
+
+<% end %>
+
+
+
+</div>
+
+

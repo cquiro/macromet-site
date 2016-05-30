@@ -14,10 +14,13 @@
                                                       class: "first-slide image-responsive cover" %>
       <div class="container">
         <div class="carousel-caption">
-          <h1>IMPULSO E INNOVACIÓN PARA SU MARCA</h1>
-          <p>Ocho años conectando productos de calidad con el consumidor final</p>
+          <h1><%= banner_named("Banner 1").title %></h1>
+          <p><%= banner_named("Banner 1").subtitle %></p>
           <p>
-            <%= link_to "Exhibición", "#portfolio", class: "btn btn-lg btn-primary page-scroll larger", role: "button" %>
+            <%= link_to banner_named("Banner 1").button, 
+                        "#portfolio", 
+                        class: "btn btn-lg btn-primary page-scroll larger", 
+                        role: "button" %>
           </p>
         </div>
       </div>
@@ -27,10 +30,13 @@
                                                     class: "second-slide image-responsive cover" %>
       <div class="container">
         <div class="carousel-caption">
-          <h1>EXPANDIMOS NUESTROS HORIZONTES</h1>
-          <p>Diseño, producción y montaje de escenografía para Comedy Central Stand-Up Colombia</P>
+          <h1><%= banner_named("Banner 2").title %></h1>
+          <p><%= banner_named("Banner 2").subtitle %></P>
           <p>
-            <%= link_to "Ambientación", "#", class: "btn btn-lg btn-primary", role: "button" %>
+            <%= link_to banner_named("Banner 2").button, 
+                        "#", 
+                        class: "btn btn-lg btn-primary", 
+                        role: "button" %>
           </p>
         </div>
       </div>
@@ -40,10 +46,13 @@
                                                             class: "third-slide image-responsive cover" %>
       <div class="container">
         <div class="carousel-caption">
-          <h1>TRADICIÓN</h1>
-          <p>Más de 27 años construyendo país</p>
+          <h1><%= banner_named("Banner 3").title %></h1>
+          <p><%= banner_named("Banner 3").subtitle %></p>
           <p>
-            <%= link_to "Nuestra historia", historia_path, class: "btn btn-lg btn-primary", role: "button" %>
+            <%= link_to banner_named("Banner 3").button, 
+                        historia_path, 
+                        class: "btn btn-lg btn-primary", 
+                        role: "button" %>
           </p>
         </div>
       </div>
@@ -94,8 +103,8 @@
   <div class="row featurette">
     <div class="col-md-4 col-md-push-8">
       <%= image_tag "Macromet_ExhibicionMJ.png", size: "250x250", 
-                                                          alt: "Exhibición", 
-                                                          class: "img-circle-right" %>
+                                                  alt: "Exhibición", 
+                                                  class: "img-circle-right" %>
     </div>
     <div class="col-md-8 col-md-pull-4">
       <h2 class="featurette-heading">Exhibición. <span class="text-muted">Hacemos que su producto sobresalga.</span></h2>
@@ -105,7 +114,9 @@
         resaltar su marca.
       </p>
       <p>
-        <%= link_to "CASOS DE ÉXITO", portafolio_path, class: "btn btn-lg btn-info btnport", role: "button" %>
+        <%= link_to "CASOS DE ÉXITO", portafolio_path, 
+                                      class: "btn btn-lg btn-info btnport", 
+                                      role: "button" %>
       </p>
     </div>
   </div>

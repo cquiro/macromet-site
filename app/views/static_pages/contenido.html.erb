@@ -1,0 +1,38 @@
+<% provide(:title, "Contenido") %>
+
+<div class="contejumbo nominferior">
+  <div class="container marketing">
+    <h1>MANEJO DE CONTENIDO</h1><br>
+  </div>
+</div><!-- /.container -->
+
+
+<div class="container marketing">
+
+  <p class="notice subcontenido"><%= flash[:notice] %></p>
+
+  <br>
+  <h1 class="subcontenido">Banners - Seleccione el banner que necesita editar</h1>
+
+  <hr>
+
+    <div class="col-lg-4">
+      <%= link_to "BANNER 1", edit_banner_path(Banner.find_by(name: "Banner 1")), 
+                              class: "btn btn-lg btn-info", 
+                              role: "button" %>
+    </div>
+    <div class="col-lg-4">
+      <%= link_to "BANNER 2", edit_banner_path(Banner.find_by(name: "Banner 2")), 
+                              class: "btn btn-lg btn-info", 
+                              role: "button" %>
+    </div>
+    <div class="col-lg-4">
+      <%= link_to "BANNER 3", edit_banner_path(Banner.find_by(name: "Banner 3")), 
+                              class: "btn btn-lg btn-info", 
+                              role: "button" %>
+    </div>
+    
+
+  
+
+</div>

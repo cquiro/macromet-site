@@ -4,17 +4,25 @@ Rails.application.routes.draw do
 
   root  'static_pages#home'
 
-  get 'portafolio'  =>  'static_pages#portafolio'
+  get   'portafolio'  =>  'static_pages#portafolio'
 
-  get 'proceso'  =>  'static_pages#proceso'
+  get   'proceso'  =>  'static_pages#proceso'
 
-  get 'historia'  =>  'static_pages#historia'
+  get   'historia'  =>  'static_pages#historia'
 
-  get 'contacto',  to:  'messages#new', as: 'contacto'
+  get   'contacto',  to:  'messages#new', as: 'contacto'
 
-  post 'contacto', to: 'messages#create'
+  post  'contacto', to: 'messages#create'
 
-  get 'usuario_nuevo'  =>  'users#new'
+  get   'usuario_nuevo'  =>  'users#new'
+
+  get   'contenido', to: 'static_pages#contenido'
+
+  resources :banners, only: [:update, :edit]
+  # get   'banners/edit', to: 'banners#edit', as: "contenido_principal"
+  # patch 'banner/update', to: 'banners#update', as: "banner_update"
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
