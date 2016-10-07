@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.3'
+gem 'rails', '4.2.6'
 gem 'bcrypt', '3.1.7'
 gem 'bootstrap-sass', '3.2.0.0'
 gem 'pg'
