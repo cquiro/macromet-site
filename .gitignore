@@ -26,3 +26,8 @@
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+
+#Ignore vim temporary files
+*.swp
+*.swo
+*~
