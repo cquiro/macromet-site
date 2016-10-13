@@ -18,7 +18,7 @@
           <p><%= banner_named("Banner 1").subtitle %></p>
           <p>
             <%= link_to banner_named("Banner 1").button, 
-                        "#portfolio", 
+                        "#{banner_named("Banner 1").link}",
                         class: "btn btn-lg btn-primary page-scroll larger", 
                         role: "button" %>
           </p>
@@ -34,7 +34,7 @@
           <p><%= banner_named("Banner 2").subtitle %></P>
           <p>
             <%= link_to banner_named("Banner 2").button, 
-                        "#", 
+                        "#{banner_named("Banner 2").link}",                        
                         class: "btn btn-lg btn-primary", 
                         role: "button" %>
           </p>
@@ -50,7 +50,8 @@
           <p><%= banner_named("Banner 3").subtitle %></p>
           <p>
             <%= link_to banner_named("Banner 3").button, 
-                        historia_path, 
+                        "#{banner_named("Banner 3").link}",                   
+                        #historia_path, 
                         class: "btn btn-lg btn-primary", 
                         role: "button" %>
           </p>

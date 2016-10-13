@@ -30,4 +30,4 @@
 #Ignore vim temporary files
 *.swp
 *.swo
-*~
+
