@@ -1,8 +1,8 @@
 FactoryGirl.define do
   factory :teammate do
-    name "MyString"
-    position "MyString"
-    bio "MyText"
-    photo "MyString"
+    name "James Bond"
+    position "Spy"
+    bio "Tomorrow Never Dies"
+    photo "007"
   end
 end
