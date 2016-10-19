@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
 
+  get 'teammates/index'
+
+  get 'teammates/show'
+
+  get 'teammates/new'
+
+  get 'teammates/edit'
+
+  get 'teammates/create'
+
+  get 'teammates/update'
+
+  get 'teammates/destroy'
+
   # resources :messages, only: [:new, :create]
 
   root  'static_pages#home'
