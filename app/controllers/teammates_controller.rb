@@ -1,13 +1,15 @@
 class TeammatesController < ApplicationController
-  before_action :set_teammate, only: [:show]
+  before_action :set_teammate, only: [:show, :edit]
 
   def index
+    @teammates = Teammate.all
   end
 
   def show
   end
 
   def new
+    @teammate = Teammate.new
   end
 
   def edit

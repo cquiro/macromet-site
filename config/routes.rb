@@ -20,11 +20,8 @@ Rails.application.routes.draw do
   get   'contenido', to: 'static_pages#contenido'
 
   resources :banners, only: [:update, :edit]
-  # get   'banners/edit', to: 'banners#edit', as: "contenido_principal"
-  # patch 'banner/update', to: 'banners#update', as: "banner_update"
 
-
-  resources :teammates, only: [:show, :index]
+  resources :teammates, only: [:show, :index, :new, :edit]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
