@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  # resources :messages, only: [:new, :create]
+  resources :messages, only: [:new, :create]
 
   root  'static_pages#home'
 
