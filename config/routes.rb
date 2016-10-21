@@ -1,18 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'teammates/index'
-
-  get 'teammates/show'
-
-  get 'teammates/new'
-
-  get 'teammates/edit'
-
-  get 'teammates/create'
-
-  get 'teammates/update'
-
-  get 'teammates/destroy'
 
   # resources :messages, only: [:new, :create]
 
@@ -37,6 +24,7 @@ Rails.application.routes.draw do
   # patch 'banner/update', to: 'banners#update', as: "banner_update"
 
 
+  resources :teammates, only: [:show, :index]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

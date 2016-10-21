@@ -1,4 +1,6 @@
 class TeammatesController < ApplicationController
+  before_action :set_teammate, only: [:show]
+
   def index
   end
 
@@ -19,4 +21,10 @@ class TeammatesController < ApplicationController
 
   def destroy
   end
+
+  private
+
+    def set_teammate
+      @teammate = Teammate.find(params[:id])
+    end
 end
