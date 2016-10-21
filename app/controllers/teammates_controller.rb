@@ -16,6 +16,14 @@ class TeammatesController < ApplicationController
   end
 
   def create
+    @teammate = Teammate.new(teammate_params)
+
+    if @teammate.save
+      flash[:success] = "Un nuevo integrante ha sido incorporado al equipo"
+      redirect_to @teammate
+   else
+     render :new
+    end
   end
 
   def update
@@ -28,5 +36,9 @@ class TeammatesController < ApplicationController
 
     def set_teammate
       @teammate = Teammate.find(params[:id])
+    end
+
+    def teammate_params
+      params.require(:teammate).permit(:name, :position, :bio, :photo)
     end
 end

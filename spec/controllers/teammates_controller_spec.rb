@@ -50,4 +50,32 @@ RSpec.describe TeammatesController, type: :controller do
       expect(assigns(:teammate)).to eq teammate
     end
   end
+
+  describe "POST #create" do
+    context "with valid attributes" do
+      it "saves the new teammate in the database" do
+        expect{
+          post :create, teammate: attributes_for(:teammate)
+        }.to change(Teammate, :count).by(1)
+      end
+
+      it "redirects to teammates#show" do
+        post :create, teammate: attributes_for(:teammate)
+        expect(response).to redirect_to teammate_path(assigns(:teammate))
+      end
+    end
+
+    context "with invalid attributes" do
+      it "does not save the new teammate in the database" do
+        expect{
+          post :create, teammate: attributes_for(:invalid_teammate)
+        }.not_to change(Teammate, :count)
+      end
+
+      it "re-renders the :new template" do
+        post :create, teammate: attributes_for(:invalid_teammate)
+        expect(response).to render_template :new
+      end
+    end
+  end
 end
