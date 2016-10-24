@@ -1,5 +1,5 @@
 class TeammatesController < ApplicationController
-  before_action :set_teammate, only: [:show, :edit]
+  before_action :set_teammate, only: [:show, :edit, :update]
 
   def index
     @teammates = Teammate.all
@@ -27,6 +27,12 @@ class TeammatesController < ApplicationController
   end
 
   def update
+    if @teammate.update(teammate_params)
+      flash[:success] = "El integrante del equipo ha sido modificado"
+      redirect_to @teammate
+    else
+      render :edit
+    end
   end
 
   def destroy

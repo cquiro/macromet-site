@@ -78,4 +78,48 @@ RSpec.describe TeammatesController, type: :controller do
       end
     end
   end
+
+  describe "PATCH# update" do
+    before :each do
+      @teammate = create(:teammate, name: "Bruce Wayne", position: "Superhero")
+    end
+
+    context "with valid attributes" do
+      it "locates the requested @teammate" do
+        patch :update, id: @teammate, teammate: attributes_for(:teammate)
+        expect(assigns(:teammate)).to eq(@teammate)
+      end
+
+      it "changes @temmate's attributes" do
+        patch :update, id: @teammate, 
+          teammate: attributes_for(:teammate, 
+            name: "Jason Bourne", 
+            position: "Spy")
+        @teammate.reload
+        expect(@teammate.name).to eq("Jason Bourne")
+        expect(@teammate.position).to eq("Spy")
+      end
+
+      it "redirects to the updated contact" do
+        patch :update, id: @teammate, teammate: attributes_for(:teammate)
+        expect(response).to redirect_to @teammate
+      end
+    end
+    
+    context "with invalid attributes" do
+      it "does not change the teammate's attributes" do
+        patch :update, id: @teammate, 
+          teammate: attributes_for(:teammate, name: nil, position: "Spy")
+        @teammate.reload
+        expect(@teammate.name).to eq("Bruce Wayne")
+        expect(@teammate.position).not_to eq("Spy")
+      end
+    end
+
+    it "re-renders the :edit template" do
+      patch :update, id: @teammate,
+        teammate: attributes_for(:invalid_teammate)
+      expect(response).to render_template :edit
+    end
+  end
 end
