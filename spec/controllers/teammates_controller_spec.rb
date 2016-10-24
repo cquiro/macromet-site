@@ -122,4 +122,16 @@ RSpec.describe TeammatesController, type: :controller do
       expect(response).to render_template :edit
     end
   end
+
+  describe "DELETE #destroy" do
+    before :each do
+      @teammate = create(:teammate)
+    end
+
+    it "deletes the contact" do
+      expect{
+        delete :destroy, id: @teammate
+      }.to change(Teammate, :count).by(-1)
+    end
+  end
 end

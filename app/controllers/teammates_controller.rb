@@ -1,5 +1,5 @@
 class TeammatesController < ApplicationController
-  before_action :set_teammate, only: [:show, :edit, :update]
+  before_action :set_teammate, only: [:show, :edit, :update, :destroy]
 
   def index
     @teammates = Teammate.all
@@ -36,6 +36,9 @@ class TeammatesController < ApplicationController
   end
 
   def destroy
+    @teammate.destroy
+    redirect_to teammates_url, 
+      notice: "Un integrante del equipo ha sido eliminado."
   end
 
   private
