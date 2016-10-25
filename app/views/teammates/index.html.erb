@@ -226,113 +226,57 @@
   </div>
   </br><br>
 
-  <!-- Team members row one -->
+  <!-- teammates row one -->
   <div class="row">
-    <div class="col-sm-6 col-md-3 portfolio-item">
-      <div class="team-member">
-        <div class="team-description macro-darkblue">
-          <br>
-          <h3>Tatiana Acuña</h3>
-          <p>Gerente Administrativa y Financiera</p>
-          <br>
-          <p>
-            Administradora de Empresas de la Universidad Externado de Colombia. Diez años de experiencia en el sector financiero
-            apoyando el desarrollo de la industria colombiana.
-          </p>
+    <p id="notice"><%= notice %></p>
+    <% if @teammates.size > 0 %>
+      <% @teammates.each do |teammate| %>
+        <div class="col-sm-6 col-md-3 portfolio-item">
+          <div class="team-member">
+            <div class="team-description macro-darkblue">
+              <br>
+              <h3><%= teammate.name %></h3>
+              <p><%= teammate.position %></p>
+              <br>
+              <p><%= teammate.bio %></p>
+              <p id="img-text"><%= link_to "Ver integrante", teammate %></p>
+            </div>
+            <%= image_tag "Macromet_Tatiana.png", 
+              alt: "#{teammate.name}", 
+              class: "image-responsive" %>
+          </div>
         </div>
-        <%= image_tag "Macromet_Tatiana.png", alt: "Tatiana Acuña", class: "image-responsive" %>
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-3 portfolio-item">
-      <div class="team-member">
-        <div class="team-description macro-medblue">
-          <br>
-          <h3>Alejandro Acuña</h3>
-          <p>Gerente Comercial</p>
-          <br>
-          <p>
-            Diseñador Industrial de la Universidad Jorge Tadeo Lozano. Trece años de experiencia en la industria publicitaria
-            diseñando, produciendo, comercializando y ejecutando proyectos POP para importantes compañías colombianas.
-          </p>
-          </p>
-        </div>
-        <%= image_tag "Macromet_Alejandro.png", alt: "Alejandro Acuña", class: "image-responsive" %>
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-3 portfolio-item">
-      <div class="team-member">
-        <div class="team-description macro-red">
-          <br>
-          <h3>Giselle Acuña</h3>
-          <p>Gerente de Producción</p>
-          <br>
-          <p>
-            Psicóloga de la Universidad de la Sabana con una especialización en Gerencia de Proyectos de la Universidad del Bosque.
-            Ocho años de experiencia diseñando e implementando proyectos de vivienda social a lo largo del territorio colombiano.
-          </p>
-        </div>
-        <%= image_tag "Macromet_Giselle.png", alt: "Giselle Acuña", class: "image-responsive" %>
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-3 portfolio-item">
-      <div class="team-member">
-        <div class="team-description macro-yellow">
-          <br>
-          <h3>Felipe Acuña</h3>
-          <p>Gerente General</p>
-          <br>
-          <p>
-            Ingeniero Electrónico de la Pontificia Universidad Javeriana. Siete años de experiencia en el sector de la tecnología
-            desarrollando negocios en Latinoamerica y Japón.
-          </p>
-        </div>
-        <%= image_tag "Macromet_Felipe.png", alt: "Felipe Acuña", class: "image-responsive" %>
-      </div>
-    </div>
+      <% end %>
+    <% end %>
 
-    <div class="col-sm-6 col-md-3 portfolio-item">
-      <div class="team-member">
-        <div class="team-description macro-red">
-          <br>
-          <h3>Johan Chacón</h3>
-          <p>Coordinador de Compras y Producción</p>
-        </div>
-        <%= image_tag "Macromet_Johan.png", alt: "Johan Chacón", class: "image-responsive" %>
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-3 portfolio-item">
-      <div class="team-member">
-        <div class="team-description macro-yellow">
-          <br>
-          <h3>Jerry Cubillos</h3>
-          <p>Coordinador de Planta</p>
-          </p>
-        </div>
-        <%= image_tag "Macromet_Jerry.png", alt: "Jerry Cubillos", class: "image-responsive" %>
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-3 portfolio-item">
-      <div class="team-member">
-        <div class="team-description macro-darkblue">
-          <br>
-          <h3>Fabian Torres</h3>
-          <p>Asistente Administrativo</p>
-        </div>
-        <%= image_tag "Macromet_Fabian.png", alt: "Fabian Torres", class: "image-responsive" %>
-      </div>
-    </div>
-  </div><!-- /.row team two -->
+        <%# image_tag "Macromet_Tatiana.png" %>
+        <%# image_tag "Macromet_Alejandro.png" %>
+        <%# image_tag "Macromet_Giselle.png" %>
+        <%# image_tag "Macromet_Felipe.png" %>
+        <%# image_tag "Macromet_Johan.png" %>
+        <%# image_tag "Macromet_Jerry.png" %>
+        <%# image_tag "Macromet_Fabian.png" %>
+  </div><!-- /.row teammates -->
   <br>
 
-  <!-- NUESTRA HISTORIA button -->
   <div class="row contacto">
     <div class="col-md-12">
       <br>
       <p>
-        <%= link_to "NUESTRA HISTORIA", historia_path, class: "btn btn-lg btn-info", role: "button" %>
+        <%= link_to "Agregar integrante", new_teammate_path %>
       </p>
     </div>
   </div>
+  
+  <!-- NUESTRA HISTORIA button -->
+  <%# <div class="row contacto"> %>
+  <%#   <div class="col-md-12"> %>
+  <%#     <br> %>
+  <%#     <p> %>
+  <%#       <%= link_to "NUESTRA HISTORIA", historia_path, class: "btn btn-lg btn-info", role: "button" %1> %>
+  <%#     </p> %>
+  <%#   </div> %>
+  <%# </div> %>
 
   <hr class="featurette-divider">
 

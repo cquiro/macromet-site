@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :messages, only: [:new, :create]
 
-  root  'static_pages#home'
+  root  'teammates#index'
 
   get   'portafolio'  =>  'static_pages#portafolio'
 
