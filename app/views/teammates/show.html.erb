@@ -10,7 +10,7 @@
   <p class="notice subcontenido"><%= flash[:notice] %></p>
 
   <div class="col-sm-6 col-md-4" id="show-item">
-    <%= image_tag "Macromet_Tatiana.png", 
+    <%= image_tag "#{@teammate.photo}", 
         alt: "#{@teammate.name}", 
         class: "image-responsive" %>
   </div>

@@ -51,3 +51,11 @@ teammate5 = Teammate.create(name: "Austin Powers",
               position: "Spy",
               bio: "Confidential",
               photo: "Some Image")
+
+
+clients = Banner.create(name: "Clientes", 
+            title: "Clientes Macromet", 
+            subtitle: "Logos de los clientes de Macromet",
+            button: "Clientes", 
+            image: "Some Image")
+

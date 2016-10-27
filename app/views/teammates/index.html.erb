@@ -10,8 +10,9 @@
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <%= image_tag banner_named("Banner 1").image, alt: "Exhibición", 
-                                                      class: "first-slide image-responsive cover" %>
+      <%= image_tag banner_named("Banner 1").image, 
+        alt: "Exhibición", 
+        class: "first-slide image-responsive cover" %>
       <div class="container">
         <div class="carousel-caption">
           <h1><%= banner_named("Banner 1").title %></h1>
@@ -26,13 +27,12 @@
       </div>
     </div>
     <div class="item">
-      <%= image_tag banner_named("Banner 2").image, alt: "Proyecto Comedy Central", 
-                                                    class: "second-slide image-responsive cover" %>
+      <%= image_tag banner_named("Banner 2").image, 
+        alt: "Proyecto Comedy Central", 
+        class: "second-slide image-responsive cover" %>
       <div class="container">
         <div class="carousel-caption">
-          <h1><%= banner_named("Banner 2").title %></h1>
-          <p><%= banner_named("Banner 2").subtitle %></P>
-          <p>
+          <h1><%= banner_named("Banner 2").title %></h1> <p><%= banner_named("Banner 2").subtitle %></P> <p>
             <%= link_to banner_named("Banner 2").button, 
                         "#{banner_named("Banner 2").link}",                        
                         class: "btn btn-lg btn-primary", 
@@ -241,7 +241,7 @@
               <p><%= teammate.bio %></p>
               <p id="img-text"><%= link_to "Ver integrante", teammate %></p>
             </div>
-            <%= image_tag "Macromet_Tatiana.png", 
+            <%= image_tag "#{teammate.photo}", 
               alt: "#{teammate.name}", 
               class: "image-responsive" %>
           </div>
@@ -288,7 +288,12 @@
 <div class="container marketing" id="clientes">
   <div class="row featurette">
     <div class="col-md-12">
-      <h2 class="featurette-heading titulo" id="titulo-clientes">Nuestros clientes.</h2>
+      <h2 class="featurette-heading titulo" id="titulo-clientes">
+        Nuestros clientes.
+      </h2>
+      <%= image_tag banner_named("Clientes").image, 
+        alt: banner_named("Clientes").title, 
+        class: "first-slide image-responsive cover" %>
     </div>
   </div>
 </div>
