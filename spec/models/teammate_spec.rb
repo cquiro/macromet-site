@@ -23,11 +23,11 @@ RSpec.describe Teammate, type: :model do
     expect(teammate.errors[:position]).to include("can't be blank")
   end
 
-  it "is invalid without a photo" do
-    teammate = build(:teammate, photo: nil) 
-    teammate.valid?
-    expect(teammate.errors[:photo]).to include("can't be blank")
-  end
+  # it "is invalid without a photo" do
+  #   teammate = build(:teammate, photo: nil) 
+  #   teammate.valid?
+  #   expect(teammate.errors[:photo]).to include("can't be blank")
+  # end
 
   it "is valid without a bio" do
     teammate = build(:teammate, bio: nil) 
