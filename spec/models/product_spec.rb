@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Product, type: :model do
+  it "has a valid factory" do
+    expect(FactoryGirl.build(:product)).to be_valid
+  end
+
   it "is valid with name, description, client, product_line and photo" do
     product = Product.new(
       name: "Grill",

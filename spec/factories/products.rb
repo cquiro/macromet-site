@@ -1,8 +1,9 @@
 FactoryGirl.define do
   factory :product do
-    name "MyString"
-    description "MyString"
-    client "MyString"
-    photo "MyString"
+    name "Grill"
+    description "Charcoal kettle grill"
+    client "Weber"
+    product_line "Soluciones"
+    photo "Some Image"
   end
 end
