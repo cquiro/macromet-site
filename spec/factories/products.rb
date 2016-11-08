@@ -5,5 +5,9 @@ FactoryGirl.define do
     client "Weber"
     product_line "Soluciones"
     photo "Some Image"
+
+    factory :invalid_product do
+      name nil
+    end
   end
 end
