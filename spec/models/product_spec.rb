@@ -1,12 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe Product, type: :model do
-  it "is valid with name, description, client, type and photo" do
+  it "is valid with name, description, client, product_line and photo" do
     product = Product.new(
       name: "Grill",
       description: "Charcoal kettle grill",
       client: "Weber",
-      type: "Soluciones",
+      product_line: "Soluciones",
       photo: "Some image")
 
     expect(product).to be_valid
@@ -30,10 +30,10 @@ RSpec.describe Product, type: :model do
     expect(product.errors[:client]).to include("can't be blank")
   end
 
-  it "is invalid without a type" do
-    product = Product.new(type: nil)
+  it "is invalid without a product_line" do
+    product = Product.new(product_line: nil)
     product.valid?
-    expect(product.errors[:type]).to include("can't be blank")
+    expect(product.errors[:product_line]).to include("can't be blank")
   end
   # it "is invalid without a photo"
 end
