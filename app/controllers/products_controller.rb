@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :edit]
+  before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   def index
     @products = Product.all
@@ -24,6 +24,21 @@ class ProductsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def update
+    if @product.update(product_params) 
+      flash[:success] = "El producto ha sido modificado"
+      redirect_to @product
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @product.destroy
+    redirect_to products_path,
+      notice: "Se ha eliminado un producto del portafolio"
   end
 
   private

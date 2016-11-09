@@ -85,19 +85,65 @@ RSpec.describe ProductsController, type: :controller do
   end
 
   describe "PATCH #update" do
+    before :each do
+      @product = create(:product, name: "Gun", description: "Fires")
+    end
+
     context "with valid attributes" do
-      it "updates the product in the database"
-      it "redirects to the product"
+      it "locates the requested product" do
+        patch :update, id: @product, product: attributes_for(:product)
+        expect(assigns(:product)).to eq @product
+      end
+
+      it "updates the product in the database" do
+        patch :update, id: @product, 
+          product: attributes_for(:product,
+            name:"Sword",
+            description: "Cuts")
+        @product.reload
+        expect(@product.name).to eq "Sword"
+        expect(@product.description).to eq "Cuts"
+      end
+
+      it "redirects to the updated product" do
+        patch :update, id: @product, product: attributes_for(:product)
+        expect(response).to redirect_to @product
+      end
     end
 
     context "with invalid attributes" do
-      it "does not upadate the product"
-      it "re-renders the :edit template"
+      it "does not upadate the product" do
+        patch :update, id: @product, 
+          product: attributes_for(:invalid_product,
+            description: "Cuts")
+        @product.reload
+        expect(@product.name).to eq "Gun"
+        expect(@product.description).not_to eq "Cuts"
+      end
+
+      it "re-renders the :edit template" do
+        patch :update, id: @product, 
+          product: attributes_for(:invalid_product,
+            description: "Cuts")
+        expect(response).to render_template :edit
+      end
     end
   end
 
   describe "DELETE #destroy" do
-    it "deletes the product from the database"
-    it "redirects to products#index"
+    before :each do
+      @product = create(:product)
+    end
+
+    it "deletes the product from the database" do
+      expect{
+        delete :destroy, id: @product
+      }.to change(Product, :count).by(-1)
+    end
+
+    it "redirects to products#index" do
+      delete :destroy, id: @product
+      expect(response).to redirect_to products_path
+    end
   end
 end
