@@ -58,13 +58,29 @@ RSpec.describe ProductsController, type: :controller do
 
   describe "POST #create" do
     context "with valid attributes" do
-      it "saves the new product in the database"
-      it "redirects to products#show"
+      it "saves the new product in the database" do
+        expect{
+          post :create, product: attributes_for(:product)
+        }.to change(Product, :count).by(1)
+      end
+
+      it "redirects to products#show" do
+        post :create, product: attributes_for(:product)
+        expect(response).to redirect_to product_path(assigns(:product))
+      end
     end
 
     context "with invalid attributes" do
-      it "does not save the new product in the database"
-      it "re-renders the :new template"
+      it "does not save the new product in the database" do
+        expect{
+          post :create, product: attributes_for(:invalid_product)
+        }.not_to change(Product, :count)
+      end
+
+      it "re-renders the :new template" do
+        post :create, product: attributes_for(:invalid_product)
+        expect(response).to render_template :new
+      end
     end
   end
 
