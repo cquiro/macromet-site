@@ -1,0 +1,82 @@
+<div class="row featurette">
+  <div class="col-md-2"></div><!-- /.col-md-2 -->
+
+  <div class="col-md-8">
+    <%= form_for @product do |form| %>
+
+      <% if @product.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= "#{pluralize(@product.errors.count, "error")} stopped the product from being saved:" %>
+          </h2>
+          
+          <ul>
+            <% @product.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <p class="notice"><%= flash[:notice] %></p>
+
+      <div class="form-group">
+        <%= form.label :name, "Nombre" %>
+        <%= form.text_field :name, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :client, "Cliente" %>
+        <%= form.text_field :client, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :description, "Descripción" %>
+        <%= form.text_field :description, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :product_line, "Línea de productos",
+                                       id: "label-product_line" %>
+      <%# </div> %>
+
+      <%# <div class="form-group"> %>
+        <ul id="radio-list">
+          <li>
+          <%= form.radio_button :product_line, "exhibicion" %>
+          <%= form.label :product_line_exhibicion, "Exhibición" %>
+          </li>
+
+          <li>
+          <%= form.radio_button :product_line, "ambientacion" %>
+          <%= form.label :product_line_ambientacion, "Ambientación" %>
+          </li>
+
+          <li>
+          <%= form.radio_button :product_line, "soluciones" %>
+          <%= form.label :product_line_soluciones, "Soluciones" %>
+          </li>
+        </ul>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :photo, "Foto actual" %>
+        <% if form.object.photo? %>
+          <br />
+          <%= image_tag(form.object.photo.url) %>
+          <br />
+        <% end %>
+        <p>Suba imágenes de dimensiones 400px de ancho por 400px de alto.</p> 
+        <%= form.file_field :photo %>
+      </div>
+
+      <div class="form-group">
+        <%= form.submit "Guardar", class: "btn btn-lg btn-primary", role: "button" %>
+        <%= link_to "Ir a productos ", products_path, class: "btn btn-lg btn-primary", role: "button" %>
+      </div>
+
+    <% end %>
+  </div><!-- /.col-md-8 -->
+
+  <div class="col-md-2"></div><!-- /.col-md-2 -->
+</div>

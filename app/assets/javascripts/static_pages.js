@@ -57,18 +57,18 @@ onLoad(function() {
     });
 
     $('#exhibit').click(function() {
-      $("#porta-am, #porta-so").hide();
-      $("#porta-ex").show();
+      $(".ambientacion, .soluciones").hide();
+      $(".exhibicion").show();
     });
 
     $('#ambient').click(function() {
-      $('#porta-ex, #porta-so').hide();
-      $('#porta-am').show();
+      $('.exhibicion, .soluciones').hide();
+      $('.ambientacion').show();
     });
 
     $('#soluci').click(function() {
-      $('#porta-ex, #porta-am').hide();
-      $('#porta-so').show();
+      $('.exhibicion, .ambientacion').hide();
+      $('.soluciones').show();
     });
 
   });

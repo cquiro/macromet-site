@@ -527,6 +527,20 @@ footer {
 
 
 // customization of panels on the portafolio page
+
+#radio-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline;
+    margin-right: 30px;
+    label {
+      font-weight: normal;
+    }
+  }
+}
+
 .panel > .panel-heading {
   background-image: none;
   background-color: $macromet-darkblue;
@@ -654,18 +668,17 @@ h1.contitle{
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
-
-@media (min-width: 1200px) {
-  .img-circle-right, .img-circle-left {
-    margin: 0 auto;
+@media (max-width: 460px) {
+  #radio-list {
+    li {
+      display: block;
+    }
   }
 }
 
 @media (max-width: 992px) {
 
 /*------ CAROUSEL ------*/
-
-
   .carousel-caption {
     margin-bottom: 120px;
     h1 {
@@ -675,12 +688,10 @@ h1.contitle{
       font-size: 1.3em;
     }
   }
-
   .carousel .item {
     height: 630px;
     background-color: #777;
   }
-
   .carousel-inner > .item > img {
     position: absolute;
     top: 0;
@@ -689,9 +700,7 @@ h1.contitle{
     height: 630px;
   }
 
-
 /*------ FOOTER ------*/
-
   footer {
     .social-links {
       margin-top: 20px;
@@ -708,41 +717,32 @@ h1.contitle{
     }
   }
 
-
 /*------ BANDA AZUL BAJO CARRUSEL ------*/
-
   #bandazul {
     padding-right: 10%;
     padding-left: 10%;
     font-size: 1.8em;
   }
 
-
 /*------ PORTAFOLIO HOME ------*/
-
   .img-circle-right, .img-circle-left {
     margin: 21px auto 10px;
   }
-
   .btn-primary, .btn-primary:focus, .btn-primary:hover {
     padding: 10px 30px;
     font-size: 1.1em;
   }
-
   .btnport {
     display: block;
   }
-
   form {
     width: 90%;
     margin: 50px auto 0;
   }
-
   title-history {
     font-size: 2.2em;
     text-align: center;
   }
-
   .content-history {
     h3 {
       font-size: 1.3em;
@@ -787,15 +787,12 @@ h1.contitle{
     font-size: 1.5em;
     line-height: 1.4;
   }
-
   .featurette-heading {
     font-size: 40px;
   }
-
   .titulo {
     font-size: 50px;
   }
-
 }
 
 
@@ -804,3 +801,10 @@ h1.contitle{
     margin-top: 20px;
   }
 }
+
+@media (min-width: 1200px) {
+  .img-circle-right, .img-circle-left {
+    margin: 0 auto;
+  }
+}
+
