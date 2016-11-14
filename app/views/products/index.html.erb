@@ -20,10 +20,8 @@
 
     <!-- This is the content that belongs to each of the nav pills -->
     <div class="col-md-9 tab-content">
-      <%# <div class="" id="porta-ex"> %>
-        <!-- start of exhibicion portfolio container -->
-        <% if @products.size > 0 %>
-          <% @products.each do |product| %>
+      <% if @products.size > 0 %>
+        <% @products.each do |product| %>
           <div class="">
             <div class="panel panel-default <%= product.product_line %>">
               <div class="panel-body">
@@ -43,13 +41,9 @@
               </div>
             </div>
           </div>
-          <% end %>
         <% end %>
-
-
-      <%# </div> %>
-      <!-- end of exhibicion portfolio container -->
-
+      <% end %>
     </div> <!-- end of the col-md-9 content -->
   </div>
 </div>
+
