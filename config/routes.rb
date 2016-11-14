@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
-  # resources :messages, only: [:new, :create]
 
-  root  'static_pages#home'
+  resources :messages, only: [:new, :create]
+
+  root  'teammates#index'
 
   get   'portafolio'  =>  'static_pages#portafolio'
 
@@ -19,10 +20,10 @@ Rails.application.routes.draw do
   get   'contenido', to: 'static_pages#contenido'
 
   resources :banners, only: [:update, :edit]
-  # get   'banners/edit', to: 'banners#edit', as: "contenido_principal"
-  # patch 'banner/update', to: 'banners#update', as: "banner_update"
 
+  resources :teammates
 
+  resources :products
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

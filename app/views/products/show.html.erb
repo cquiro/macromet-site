@@ -1,0 +1,31 @@
+<% provide(:title, "#{@product.name}") %>
+
+<div class="contejumbo nominferior">
+  <div class="container marketing">
+    <h1>Datos - Producto</h1><br>
+  </div>
+</div><!-- /.container -->
+
+<div class="container marketing" id="info-teammate">
+  <p class="notice subcontenido"><%= flash[:notice] %></p>
+
+  <div class="col-sm-6 col-md-4" id="show-item">
+    <%= image_tag "#{@product.photo}", 
+        alt: "#{@product.name}", 
+        class: "image-responsive" %>
+  </div>
+  <div class="col-sm-6 col-md-8" id="data-teammate">
+    <div id="data-teammate">
+      <p class="attr-teammate">Nombre:</p><p><%= @product.name %></p>
+      <p class="attr-teammate">Descripción:</p>
+      <p><%= @product.description %></p>
+      <p class="attr-teammate">Cliente:</p><p><%= @product.client %></p>
+      <p class="attr-teammate">Línea de producto:</p><p><%= @product.product_line %></p>
+    </div>
+    <p>
+    <%= link_to "Ir a productos", products_path %> | 
+    <%= link_to "Editar", edit_product_path(@product) %> | 
+    <%= link_to "Eliminar", @product, method: :delete, data: { confirm: "Este producto será eliminado del portafolio" } %>
+    </p>
+  </div>
+</div>

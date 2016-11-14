@@ -18,7 +18,7 @@
           <p><%= banner_named("Banner 1").subtitle %></p>
           <p>
             <%= link_to banner_named("Banner 1").button, 
-                        "#portfolio", 
+                        "#{banner_named("Banner 1").link}",
                         class: "btn btn-lg btn-primary page-scroll larger", 
                         role: "button" %>
           </p>
@@ -34,7 +34,7 @@
           <p><%= banner_named("Banner 2").subtitle %></P>
           <p>
             <%= link_to banner_named("Banner 2").button, 
-                        "#", 
+                        "#{banner_named("Banner 2").link}",                        
                         class: "btn btn-lg btn-primary", 
                         role: "button" %>
           </p>
@@ -50,7 +50,8 @@
           <p><%= banner_named("Banner 3").subtitle %></p>
           <p>
             <%= link_to banner_named("Banner 3").button, 
-                        historia_path, 
+                        "#{banner_named("Banner 3").link}",                   
+                        #historia_path, 
                         class: "btn btn-lg btn-primary", 
                         role: "button" %>
           </p>
@@ -201,13 +202,6 @@
         <p>Entregamos e instalamos un producto del que nos sentimos orgullosos en el tiempo pactado. Su negocio es nuestra prioridad.</p>
       </div><!-- /.col-lg-3 -->
     </div><!-- /.row -->
-    <!-- <div class="row">
-      <div class="col-lg-12">
-        <p id="button">
-          <%#= link_to "MÁS SOBRE NUESTRO PROCESO", proceso_path, class: "btn btn-lg btn-info", id: "btn-proc", role: "button" %>
-        </p>
-      </div>
-    </div> -->
   </div>
 </div><!-- container process -->
 
@@ -234,7 +228,7 @@
 
   <!-- Team members row one -->
   <div class="row">
-    <div class="col-md-3 portfolio-item">
+    <div class="col-sm-6 col-md-3 portfolio-item">
       <div class="team-member">
         <div class="team-description macro-darkblue">
           <br>
@@ -249,7 +243,7 @@
         <%= image_tag "Macromet_Tatiana.png", alt: "Tatiana Acuña", class: "image-responsive" %>
       </div>
     </div>
-    <div class="col-md-3 portfolio-item">
+    <div class="col-sm-6 col-md-3 portfolio-item">
       <div class="team-member">
         <div class="team-description macro-medblue">
           <br>
@@ -265,7 +259,7 @@
         <%= image_tag "Macromet_Alejandro.png", alt: "Alejandro Acuña", class: "image-responsive" %>
       </div>
     </div>
-    <div class="col-md-3 portfolio-item">
+    <div class="col-sm-6 col-md-3 portfolio-item">
       <div class="team-member">
         <div class="team-description macro-red">
           <br>
@@ -280,7 +274,7 @@
         <%= image_tag "Macromet_Giselle.png", alt: "Giselle Acuña", class: "image-responsive" %>
       </div>
     </div>
-    <div class="col-md-3 portfolio-item">
+    <div class="col-sm-6 col-md-3 portfolio-item">
       <div class="team-member">
         <div class="team-description macro-yellow">
           <br>
@@ -295,12 +289,8 @@
         <%= image_tag "Macromet_Felipe.png", alt: "Felipe Acuña", class: "image-responsive" %>
       </div>
     </div>
-  </div>
-  <!-- /.row team one -->
 
-  <!-- Team members row two -->
-  <div class="row">
-    <div class="col-md-3 portfolio-item">
+    <div class="col-sm-6 col-md-3 portfolio-item">
       <div class="team-member">
         <div class="team-description macro-red">
           <br>
@@ -310,7 +300,7 @@
         <%= image_tag "Macromet_Johan.png", alt: "Johan Chacón", class: "image-responsive" %>
       </div>
     </div>
-    <div class="col-md-3 portfolio-item">
+    <div class="col-sm-6 col-md-3 portfolio-item">
       <div class="team-member">
         <div class="team-description macro-yellow">
           <br>
@@ -321,7 +311,7 @@
         <%= image_tag "Macromet_Jerry.png", alt: "Jerry Cubillos", class: "image-responsive" %>
       </div>
     </div>
-    <div class="col-md-3 portfolio-item">
+    <div class="col-sm-6 col-md-3 portfolio-item">
       <div class="team-member">
         <div class="team-description macro-darkblue">
           <br>
@@ -331,8 +321,7 @@
         <%= image_tag "Macromet_Fabian.png", alt: "Fabian Torres", class: "image-responsive" %>
       </div>
     </div>
-  </div>
-  <!-- /.row team two -->
+  </div><!-- /.row team two -->
   <br>
 
   <!-- NUESTRA HISTORIA button -->
@@ -345,4 +334,18 @@
     </div>
   </div>
 
-</div><!-- /.container -->
+  <hr class="featurette-divider">
+
+</div><!-- /.container team-->
+  
+
+<!-- Nuestros clientes
+================================================== -->
+<div class="container marketing" id="clientes">
+  <div class="row featurette">
+    <div class="col-md-12">
+      <h2 class="featurette-heading titulo" id="titulo-clientes">Nuestros clientes.</h2>
+    </div>
+  </div>
+</div>
+

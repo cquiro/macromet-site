@@ -1,0 +1,58 @@
+<div class="row featurette">
+  <div class="col-md-2"></div><!-- /.col-md-2 -->
+
+  <div class="col-md-8">
+    <%= form_for @teammate do |form| %>
+
+      <% if @teammate.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= "#{pluralize(@teammate.errors.count, "error")} stopped the teammate from being saved:" %>
+          </h2>
+          
+          <ul>
+            <% @teammate.erros.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <p class="notice"><%= flash[:notice] %></p>
+
+      <div class="form-group">
+        <%= form.label :name, "Nombre" %>
+        <%= form.text_field :name, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :position, "Cargo" %>
+        <%= form.text_field :position, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :bio, "Perfil" %>
+        <%= form.text_field :bio, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :photo, "Foto actual" %>
+        <% if form.object.photo? %>
+          <br />
+          <%= image_tag(form.object.photo.url) %>
+          <br />
+        <% end %>
+        <p>Suba imágenes de dimensiones 2600px de ancho por 1300px de alto.</p> 
+        <%= form.file_field :photo %>
+      </div>
+
+      <div class="form-group">
+        <%= form.submit "Guardar", class: "btn btn-lg btn-primary", role: "button" %>
+        <%= link_to "Ir a inicio ", root_path, class: "btn btn-lg btn-primary", role: "button" %>
+      </div>
+
+    <% end %>
+  </div><!-- /.col-md-8 -->
+
+  <div class="col-md-2"></div><!-- /.col-md-2 -->
+</div>

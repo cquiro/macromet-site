@@ -17,9 +17,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right"  id="top-menu">
-            <li><%= link_to "Portafolio", {:action => "home", :controller => "static_pages", :anchor => "portfolio"}, :class => "page-scroll" %></li>
-            <li><%= link_to "Proceso", {:action => "home", :controller => "static_pages", :anchor => "process"}, :class => "page-scroll" %></li>
-            <li><%= link_to "Equipo", {:action => "home", :controller => "static_pages", :anchor => "team"}, :class => "page-scroll" %></li>
+            <li><%= link_to "Portafolio", {:action => "index", :controller => "teammates", :anchor => "portfolio"}, :class => "page-scroll" %></li>
+            <li><%= link_to "Proceso", {:action => "index", :controller => "teammates", :anchor => "process"}, :class => "page-scroll" %></li>
+            <li><%= link_to "Equipo", {:action => "index", :controller => "teammates", :anchor => "team"}, :class => "page-scroll" %></li>
             <li><%= link_to "Contacto", contacto_path, id: "noquery" %></li>
           </ul>
         </div>

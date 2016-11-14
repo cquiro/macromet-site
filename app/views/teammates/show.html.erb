@@ -1,0 +1,29 @@
+<% provide(:title, "#{@teammate.name}") %>
+
+<div class="contejumbo nominferior">
+  <div class="container marketing">
+    <h1>Datos - Integrante de Macromet</h1><br>
+  </div>
+</div><!-- /.container -->
+
+<div class="container marketing" id="info-teammate">
+  <p class="notice subcontenido"><%= flash[:notice] %></p>
+
+  <div class="col-sm-6 col-md-4" id="show-item">
+    <%= image_tag "#{@teammate.photo}", 
+        alt: "#{@teammate.name}", 
+        class: "image-responsive" %>
+  </div>
+  <div class="col-sm-6 col-md-8" id="data-teammate">
+    <div id="data-teammate">
+      <p class="attr-teammate">Nombre:</p><p><%= @teammate.name %></p>
+      <p class="attr-teammate">Cargo:</p><p><%= @teammate.position %></p>
+      <p class="attr-teammate">Perfil:</p><p><%= @teammate.bio %></p>
+    </div>
+    <p>
+    <%= link_to "Volver", root_path %> | 
+    <%= link_to "Editar", edit_teammate_path(@teammate) %> | 
+    <%= link_to "Eliminar", @teammate, method: :delete, data: { confirm: "Este integrante será eliminado del equipo" } %>
+    </p>
+  </div>
+</div>
