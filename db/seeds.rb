@@ -23,36 +23,6 @@ banner3 = Banner.create(name: "Banner 3",
             button: "Nuestra Historia", 
             image: "Some Image")
 
-teammate1 = Teammate.create(name: "James Bond",
-              position: "Spy",
-              bio: "Confidential",
-              photo: "Some Image")
-
-
-teammate2 = Teammate.create(name: "Jason Bourne",
-              position: "Spy",
-              bio: "Confidential",
-              photo: "Some Image")
-
-
-teammate3 = Teammate.create(name: "Ethan Hunt",
-              position: "Spy",
-              bio: "Confidential",
-              photo: "Some Image")
-
-
-teammate4 = Teammate.create(name: "Sterling Archer",
-              position: "Spy",
-              bio: "Confidential",
-              photo: "Some Image")
-
-
-teammate5 = Teammate.create(name: "Austin Powers",
-              position: "Spy",
-              bio: "Confidential",
-              photo: "Some Image")
-
-
 clients = Banner.create(name: "Clientes", 
             title: "Clientes Macromet", 
             subtitle: "Logos de los clientes de Macromet",
