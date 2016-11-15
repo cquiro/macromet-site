@@ -32,12 +32,9 @@ body {
 .navbar-wrapper .navbar .container {
   width: auto;
 }
-
 .navbar-nav > li > a {
   color: white;
 }
-
-
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
@@ -47,6 +44,7 @@ body {
   height: 500px;
   margin-bottom: 60px;
 }
+
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   z-index: 10;
@@ -65,7 +63,6 @@ body {
   height: 500px;
 }
 
-
 /* MARKETING CONTENT
 -------------------------------------------------- */
 
@@ -81,7 +78,6 @@ body {
   margin-right: 10px;
   margin-left: 10px;
 }
-
 
 /* Featurettes
 ------------------------- */
@@ -102,6 +98,7 @@ body {
 -------------------------------------------------- */
 
 @media (min-width: 768px) {
+
   /* Navbar positioning foo */
   .navbar-wrapper {
     margin-top: 20px;
