@@ -7,4 +7,8 @@ class User < ActiveRecord::Base
 										uniqueness: { case_sensitive: false }
 	has_secure_password
 	validates  :password, presence: true, length: { minimum: 6 }
+  
+  def generate_password_reset_token!
+    update_attribute(:password_reset_token, SecureRandom.urlsafe_base64(48))
+  end
 end
