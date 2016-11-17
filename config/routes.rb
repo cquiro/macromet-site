@@ -1,19 +1,6 @@
 Rails.application.routes.draw do
 
-
-  get 'user_sessions/new'
-
-  get 'user_sessions/create'
-
-  resources :messages, only: [:new, :create]
-
   root  'teammates#index'
-
-  get   'portafolio'  =>  'static_pages#portafolio'
-
-  get   'proceso'  =>  'static_pages#proceso'
-
-  get   'historia'  =>  'static_pages#historia'
 
   get   'contacto',  to:  'messages#new', as: 'contacto'
 
@@ -23,7 +10,11 @@ Rails.application.routes.draw do
 
   get   'contenido', to: 'static_pages#contenido'
 
+  delete 'logout', to: 'user_sessions#destroy'
+
   resources :banners, only: [:update, :edit]
+
+  resources :user_sessions, only: [:new, :create]
 
   resources :teammates
 

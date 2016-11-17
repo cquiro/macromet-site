@@ -89,5 +89,35 @@ RSpec.describe UserSessionsController, type: :controller do
       it_behaves_like "denied login"
     end
   end
+
+  describe "DELETE destroy" do
+    context "logged in" do
+      before :each do
+        @user = create(:user)
+        post :create, email: @user.email, password: "password" 
+      end
+
+      it "redirects to new_user_session_path" do
+        delete :destroy
+        expect(response).to redirect_to new_user_session_path
+      end
+
+      it "sets a notice flash message" do
+        delete :destroy
+        expect(flash[:notice]).to eq "La sesión ha finalizado"
+      end
+
+      it "removes the session[:user_id] key" do
+        session[:user_id] = 1
+        delete :destroy
+        expect(session[:user_id]).to be_nil
+      end
+
+      it "resets the session" do
+        expect(controller).to receive(:reset_session)
+        delete :destroy
+      end
+    end
+  end
 end
 
