@@ -50,6 +50,44 @@ RSpec.describe UserSessionsController, type: :controller do
         expect(flash[:success]).to eq "Has iniciado sesión"
       end
     end
-  end
 
+    shared_examples_for "denied login" do
+      it "renders the new template" do
+        post :create, email: email, password: password
+        expect(response).to render_template :new
+      end
+
+      it "sets the flash error message" do
+        post :create, email: email, password: password
+        expect(flash[:error]).to eq "Revisa tu usuario y contraseña e intenta de nuevo"
+      end
+    end
+    
+    context "with blank credentials" do
+      let(:email) { "" }
+      let(:password) { "" }
+      it_behaves_like "denied login"
+    end
+
+    context "with incorrect password" do
+      before :each do
+        @user = create(:user)
+      end
+
+      let(:email) { @user.email }
+      let(:password) { "incorrect" }
+      it_behaves_like "denied login"
+    end
+    
+    context "with no email in existence" do
+      before :each do
+        @user = create(:user)
+      end
+
+      let(:email) { "none@found.com" }
+      let(:password) { "password" }
+      it_behaves_like "denied login"
+    end
+  end
 end
+
