@@ -17,7 +17,9 @@
         <li role="presentation"><a href="#" class="macro-pills anime" id="soluci">Soluciones</a></li>
       </ul>
       <br />
-      <p><%= link_to "Agregar producto", new_product_path %></p>
+      <% if logged_in? %>
+        <p><%= link_to "Agregar producto", new_product_path %></p>
+      <% end %>
     </div> <!-- end of nav pills on the left -->
 
     <!-- This is the content that belongs to each of the nav pills -->
@@ -34,7 +36,9 @@
                       <strong>Cliente:</strong> <%= product.client %>
                     </p><br>
                     <p><%= product.description%></p><br>
-                    <p><%= link_to "Ver producto", product %></p>
+                    <% if logged_in? %>
+                      <p><%= link_to "Ver producto", product %></p>
+                    <% end %>
                   </div>
                   <div class="col-md-5 prod-pic">
                     <%= image_tag "#{product.photo}", size: "287x287", alt: product.name, class: "image-port" %>

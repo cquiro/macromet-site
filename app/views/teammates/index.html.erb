@@ -239,7 +239,9 @@
               <p><%= teammate.position %></p>
               <br>
               <p><%= teammate.bio %></p>
-              <p id="img-text"><%= link_to "Ver integrante", teammate %></p>
+              <% if logged_in? %>
+                <p id="img-text"><%= link_to "Ver integrante", teammate %></p>
+              <% end %>
             </div>
             <%= image_tag "#{teammate.photo}", 
               alt: "#{teammate.name}", 
@@ -255,9 +257,11 @@
   <div class="row contacto">
     <div class="col-md-12">
       <br>
-      <p>
-        <%= link_to "Agregar integrante", new_teammate_path %>
-      </p>
+      <% if logged_in? %>
+        <p>
+          <%= link_to "Agregar integrante", new_teammate_path %>
+        </p>
+      <% end %>
     </div>
   </div>
   

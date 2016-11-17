@@ -1,20 +1,22 @@
 Rails.application.routes.draw do
 
-  root  'teammates#index'
+  root      'teammates#index'
 
-  get   'contacto',  to:  'messages#new', as: 'contacto'
+  get       'contacto',  to:  'messages#new', as: 'contacto'
 
-  post  'contacto', to: 'messages#create'
+  post      'contacto', to: 'messages#create'
 
-  get   'usuario_nuevo'  =>  'users#new'
+  get       'usuario_nuevo'  =>  'users#new'
 
-  get   'contenido', to: 'static_pages#contenido'
+  get       'contenido', to: 'static_pages#contenido'
 
-  delete 'logout', to: 'user_sessions#destroy'
+  get       'macromet_manejo_contenido', to: 'user_sessions#new'
+
+  post      'macromet_manejo_contenido', to: 'user_sessions#create'
+
+  delete    'logout', to: 'user_sessions#destroy'
 
   resources :banners, only: [:update, :edit]
-
-  resources :user_sessions, only: [:new, :create]
 
   resources :teammates
 

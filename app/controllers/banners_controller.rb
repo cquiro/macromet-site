@@ -1,4 +1,5 @@
 class BannersController < ApplicationController
+  before_action :require_user
 
   def edit
     @banner = Banner.find(params[:id])

@@ -1,6 +1,6 @@
 class TeammatesController < ApplicationController
   before_action :set_teammate, only: [:show, :edit, :update, :destroy]
-
+  before_action :require_user, except: [:index]
   def index
     @teammates = Teammate.all
   end

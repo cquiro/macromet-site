@@ -1,16 +1,5 @@
 class StaticPagesController < ApplicationController
-  def home
-  end
-
-  def portafolio
-  end
-
-  def proceso
-  end
-
-  def historia
-  end
-
+  before_action :require_user, only: [:contenido]
   def contacto
   end
 

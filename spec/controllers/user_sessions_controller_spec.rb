@@ -97,9 +97,9 @@ RSpec.describe UserSessionsController, type: :controller do
         post :create, email: @user.email, password: "password" 
       end
 
-      it "redirects to new_user_session_path" do
+      it "redirects to macromet_manejo_contenido_path" do
         delete :destroy
-        expect(response).to redirect_to new_user_session_path
+        expect(response).to redirect_to macromet_manejo_contenido_path
       end
 
       it "sets a notice flash message" do
