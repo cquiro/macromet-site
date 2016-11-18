@@ -30,7 +30,35 @@ RSpec.describe PasswordResetsController, type: :controller do
         }.to change(ActionMailer::Base.deliveries, :size)
       end
 
-      it "sets the flash[:success] message"
+      it "sets the flash[:success] message" do
+        post :create, email: user.email
+        expect(flash[:success]).to eq "Revisa tu email para restablecer tu contraseña"
+      end
+    end
+  end
+
+  describe "GET edit" do
+    context "with a valid password_reset_token" do
+      let(:user) { create(:user) }
+      before { user.generate_password_reset_token! }
+
+      it "renders the edit template" do
+        get :edit, id: user.password_reset_token
+        expect(response).to render_template :edit
+      end
+      
+      it "assigns a @user" do
+        get :edit, id: user.password_reset_token
+        expect(assigns(:user)).to eq user
+      end
+    end
+
+    context "with no password_reset_token found" do
+      it "renders the 404 page" do
+        get :edit, id: "notfound"
+        expect(response.status).to eq(404)
+      end
     end
   end
 end
+
