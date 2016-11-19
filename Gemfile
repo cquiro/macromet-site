@@ -31,6 +31,7 @@ group :test do
   gem 'mini_backtrace', '0.1.3'
   gem 'guard-minitest', '2.3.1'
   gem 'capybara', '~> 2.7.1'
+  gem 'capybara-email', '~> 2.5.0'
   gem 'faker', '~> 1.6.6'
   gem 'database_cleaner', '~> 1.5.3'
 end
