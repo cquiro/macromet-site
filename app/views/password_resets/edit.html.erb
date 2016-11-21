@@ -1,0 +1,41 @@
+<% provide(:title, "Nueva contraseña") %>
+
+<div class="contejumbo nominferior">
+  <div class="container marketing">
+    <h1>Elige tu nueva contraseña</h1><br>
+  </div>
+</div><!-- /.container -->
+
+<div class="container marketing">
+  <div class="row featurette">
+    <div class="col-md-2"></div><!-- /.col-md-2 -->
+
+    <div class="col-md-8">
+      <%= form_for @user, url: password_reset_path(@user.password_reset_token), html: { method: :patch } do |form| %>
+        
+        <% flash.each do |type, message| %>
+          <div class="alert flash <% type %>">
+            <%= message %>
+          </div>
+        <% end %>
+
+        <div class="form-group">
+          <%= form.label :password, "Nueva contraseña" %>
+          <%= form.password_field :password, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= form.label :password_confirmation, "Nueva contraseña (otra vez)" %>
+          <%= form.password_field :password_confirmation, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= submit_tag "Enviar", class: "btn btn-sm btn-primary", id: "small-btn", role: "button" %>
+        </div>
+
+      <% end %>
+    </div><!-- /.col-md-8 -->
+
+    <div class="col-md-2"></div><!-- /.col-md-2 -->
+  </div>
+</div>

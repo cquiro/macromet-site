@@ -1,0 +1,36 @@
+<% provide(:title, "Restablecer contraseña") %>
+
+<div class="contejumbo nominferior">
+  <div class="container marketing">
+    <h1>Restablecer mi contraseña</h1><br>
+  </div>
+</div><!-- /.container -->
+
+<div class="container marketing">
+  <div class="row featurette">
+    <div class="col-md-2"></div><!-- /.col-md-2 -->
+
+    <div class="col-md-8">
+      <%= form_tag password_resets_path do %>
+
+        <% flash.each do |type, message| %>
+          <div class="alert flash <% type %>">
+            <%= message %>
+          </div>
+        <% end %>
+
+        <div class="form-group">
+          <%= label_tag :email, "Email" %>
+          <%= text_field_tag :email, params[:email] %>
+        </div>
+
+        <div class="form-group">
+          <%= submit_tag "Enviar", class: "btn btn-sm btn-primary", id: "small-btn", role: "button" %>
+        </div>
+
+      <% end %>
+    </div><!-- /.col-md-8 -->
+
+    <div class="col-md-2"></div><!-- /.col-md-2 -->
+  </div>
+</div>
