@@ -29,3 +29,8 @@ clients = Banner.create(name: "Clientes",
             button: "Clientes", 
             image: File.open(File.join(Rails.root, 'app/assets/images/clientes_macromet.jpg')))
 
+user = User.create( 
+          name: "Administrador", 
+          email: "info@macromet.com.co", 
+          password: "temporal", 
+          password_confirmation: "temporal" )
