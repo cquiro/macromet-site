@@ -17,10 +17,23 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right"  id="top-menu">
-            <li><%= link_to "Portafolio", {:action => "index", :controller => "teammates", :anchor => "portfolio"}, :class => "page-scroll" %></li>
-            <li><%= link_to "Proceso", {:action => "index", :controller => "teammates", :anchor => "process"}, :class => "page-scroll" %></li>
-            <li><%= link_to "Equipo", {:action => "index", :controller => "teammates", :anchor => "team"}, :class => "page-scroll" %></li>
-            <li><%= link_to "Contacto", contacto_path, id: "noquery" %></li>
+            <% if logged_in? %>
+              <li>
+                <%= link_to "Logout", logout_path, method: :delete %>
+              </li>
+            <% end %>
+            <li>
+              <%= link_to "Portafolio", {:action => "index", :controller => "teammates", :anchor => "portfolio"}, :class => "page-scroll" %>
+            </li>
+            <li>
+              <%= link_to "Proceso", {:action => "index", :controller => "teammates", :anchor => "process"}, :class => "page-scroll" %>
+            </li>
+            <li>
+              <%= link_to "Equipo", {:action => "index", :controller => "teammates", :anchor => "team"}, :class => "page-scroll" %>
+            </li>
+            <li>
+              <%= link_to "Contacto", contacto_path, id: "noquery" %>
+            </li>
           </ul>
         </div>
       </div>
