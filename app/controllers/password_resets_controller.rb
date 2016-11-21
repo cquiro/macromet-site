@@ -9,6 +9,7 @@ class PasswordResetsController < ApplicationController
       user.generate_password_reset_token!
       MessageMailer.password_reset(user).deliver_now
       redirect_to macromet_manejo_contenido_path
+      flash[:success] = "Revisa tu email para restablecer tu contraseña"
     else
       flash[:error] = "Ese email no está en nuestra base de datos."
       render :new
