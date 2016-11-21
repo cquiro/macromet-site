@@ -88,6 +88,6 @@ Rails.application.configure do
     authentication:       'plain',
     enable_starttls_auto: true  }
 
-  config.action_mailer.default_url_options = { host: "http://www.macromet.com.co/" }
+  config.action_mailer.default_url_options = { host: "develop-macro.bfgpmzmf2t.us-west-2.elasticbeanstalk.com" }
     
 end
