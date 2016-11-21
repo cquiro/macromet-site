@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   get       'contenido', to: 'static_pages#contenido'
 
+  get       'historia', to: 'static_pages#historia'
+
   get       'macromet_manejo_contenido', to: 'user_sessions#new'
 
   post      'macromet_manejo_contenido', to: 'user_sessions#create'

@@ -3,6 +3,9 @@ class StaticPagesController < ApplicationController
   def contacto
   end
 
+  def historia
+  end
+
   def contenido
   end
 end
